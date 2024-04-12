@@ -1,9 +1,9 @@
 'use client'
 import { useQuery } from "@apollo/client";
-import { useMegaMenu } from "./useMegaMenu";
-const MegaMenuLocal = async () => {
-    const { getData } = useMegaMenu();
-    const data = await getData();
+import { GET_MEGAMENU_GQL } from "./MegaMenu.gql";
+const MegaMenuLocal = () => {
+    const { data, loading } = useQuery(GET_MEGAMENU_GQL);
+    if(loading) return 'Loading';
     return <div>
         {JSON.stringify(data)}
     </div>

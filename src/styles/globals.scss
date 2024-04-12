@@ -1,0 +1,30 @@
+// @import 'bootstrap/dist/css/bootstrap-grid.min.css';
+html {
+    font-size: 10px;
+}
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    font-size: $font-size--base;
+    line-height: 1.5;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+p {
+    margin: 0;
+}
+.container {
+    padding: 0 1.6rem;
+    max-width: $max-width + 3.2rem;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,32 @@
+.main {
+    @include flex-center;
+    padding-top: 2rem;
+    column-gap: 2rem;
+    row-gap: 1.6rem;
+    @include respond-to-max($desktopSize) {
+        padding-top: 1.6rem;
+        flex-wrap: wrap
+    }
+}
+.logo, .search {
+    @include respond-to-min($desktopSize) {
+        margin-right: 1rem;
+    }
+}
+.right {
+    @include flex-center;
+    column-gap: 2rem;
+}
+.card {
+    @include respond-to-max($desktopSize) {
+        order: -1;
+        width: calc(50% - 1rem);
+    }
+}
+.space {
+    display: none;
+    flex: 1;
+    @include respond-to-max($desktopSize) {
+        display: block;
+    }
+}

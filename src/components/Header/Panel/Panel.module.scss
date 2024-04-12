@@ -1,0 +1,30 @@
+.root {
+    background-color: $color-secondary;
+    @include respond-to-max($desktopSize) {
+        display: none;
+    }
+}
+.flex-center {
+    @include flex-center;
+}
+
+.container {
+    @include flex-center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    color: #fff;
+    font-size: $font-size--xsl;
+}
+.left, .right {
+    @include flex-center;
+}
+.left {
+    @include flex-center;
+    column-gap: 6rem;
+    &__item {
+        column-gap: 0.8rem;
+    }
+}
+.right {
+    column-gap: 1.2rem;
+}

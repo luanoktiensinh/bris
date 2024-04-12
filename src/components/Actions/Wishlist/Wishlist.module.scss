@@ -1,0 +1,4 @@
+@import '../Action.scss';
+.btn {
+    @include btnStyle
+}

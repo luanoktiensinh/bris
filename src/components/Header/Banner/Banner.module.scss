@@ -1,0 +1,13 @@
+.root {
+    background: $color-primary;
+    font-size: $font-size--lg;
+    line-height: 3.2rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    padding: 1.4rem 0;
+    @include respond-to-max($desktopSize) {
+        font-size: $font-size--sm;
+        line-height: 1.4;
+    }
+}

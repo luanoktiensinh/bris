@@ -1,0 +1,55 @@
+$color-input: #f0f0f0;
+
+.input {
+    width: 100%;
+    background-color: $color-input;
+    border: 2px solid $color-input;
+    border-radius: 5rem;
+    color: #707070;
+    font-size: $font-size--sm;
+    letter-spacing: 0.5px;
+    padding: 1.4rem 4rem 1.4rem 2rem;
+    height: 5rem;
+    outline: none;
+    transition: all .25s ease;
+    @include respond-to-max($desktopSize) {
+        background-color: #fff;
+        height: 4.6rem;
+        border: 1px solid #c1c1c1;
+        padding-right: 3rem;
+        padding-left: 5rem;
+    }
+    &:focus, :focus-visible {
+        background: #fff;
+        border-color: $color-input;
+    }
+    &-container {
+        position: relative;
+        flex: 1;
+        @include respond-to-max($desktopSize) {
+            order: 1;
+            flex: auto;
+            width: 100%;
+        }
+    }
+    &-icon {
+        position: absolute;
+        top: 50%;
+        right: 1.6rem;
+        transform: translateY(-50%);
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        width: 2rem;
+        height: 2rem;
+        color: #707070;
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+        @include respond-to-max($desktopSize) {
+            right: auto;
+            left: 1.6rem;
+        }
+    }
+}
