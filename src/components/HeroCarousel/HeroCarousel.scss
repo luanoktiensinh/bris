@@ -1,0 +1,21 @@
+.hero-carousel-block {
+    margin-bottom: 48px;
+    .swiper-button-prev, .swiper-button-next {
+        color: #fff;
+        &:after {
+            font-size: 36px;
+        }
+    }
+    .swiper-pagination {
+        margin-bottom: 30px;
+        .swiper-pagination-bullet {
+            height: 10px;
+            width: 10px;
+            border: 1px solid #fff;
+            background-color: #000;
+            &.swiper-pagination-bullet-active {
+                border-color: #000;
+            }
+        }
+    }
+}

@@ -8,6 +8,15 @@ export const GQL_RESOLVE_URL = gql`
 			type
 			... on CmsPage {
 				identifier
+				bottom_content
+				content
+				content_heading
+				meta_description
+				meta_keywords
+				meta_title
+				page_layout
+				title
+				url_key
 				__typename
 			}
 			... on ProductInterface {

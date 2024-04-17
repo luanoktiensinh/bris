@@ -7,12 +7,12 @@ export const HeaderSearch = ({
 }: ISearch) => {
     return <div className={`${styles['input-container']} ${classes ?? ''}`}>
         <input
-        className={styles.input}
-        type="text"
-        placeholder="What are you looking for?"
-        autoComplete="off"
+            className={styles.input}
+            type="text"
+            placeholder="What are you looking for?"
+            autoComplete="off"
         />
-        <button className={styles['input-icon']}>
+        <button className={styles['input-icon']} title="search">
             <SearchIcon />
         </button>
     </div>

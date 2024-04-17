@@ -2,7 +2,7 @@ import styles from './MiniCart.module.scss';
 import { ShoppingCartIcon } from "@/icons/icon-shopping-cart";
 export const HeaderActionMiniCart = () => {
     return <div>
-        <button className={styles.btn}>
+        <button className={styles.btn} title="Mini cart">
             <ShoppingCartIcon />
         </button>
     </div>

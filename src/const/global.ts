@@ -1,0 +1,1 @@
+export const MEGAMENU_BRANDS_ID = 9999;

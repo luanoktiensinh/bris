@@ -12,12 +12,17 @@
     background: transparent;
     cursor: pointer;
     text-align: left;
+    img {
+        height: auto;
+    }
     @include respond-to-min($desktopSize) {
         max-width: 20rem;
         min-width: 20rem;
     }
     @include respond-to-max($desktopSize) {
         height: 3.6rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
     }
 }
 .title {

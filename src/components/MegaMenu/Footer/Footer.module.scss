@@ -1,0 +1,13 @@
+$border-color: #c4c4c4;
+.footer {
+    border-top: 2px solid $border-color;
+    padding: 3rem 0;
+    @include flex-center;
+    column-gap: 3rem;
+    &__item {
+        @include flex-center;
+        column-gap: 0.8rem;
+        font-size: $font-size--sm;
+        color: #707070
+    }
+}

@@ -1,0 +1,11 @@
+.main {
+    position: relative;
+    @include flex-center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 2.8rem;
+    margin-top: 0.4rem;
+    @include respond-to-max($desktopSize) {
+        display: none;
+    }
+}

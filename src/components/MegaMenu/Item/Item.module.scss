@@ -1,0 +1,18 @@
+.link {
+    display: block;
+    white-space: nowrap;
+    font-size: $font-size--sml;
+    font-weight: 700;
+    color: #000;
+    border-bottom: 4px solid transparent;
+    padding: 0.9rem 0;
+    transition: all .25s ease;
+    &:hover {
+        color: $color-secondary;
+        border-color: currentColor;
+        text-decoration: none;
+    }
+}
+.hide {
+    display: none;
+}

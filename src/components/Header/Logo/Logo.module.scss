@@ -1,9 +1,12 @@
 .logo {
     display: block;
     width: 20rem;
-    height: 5rem;
+    height: auto;
+    aspect-ratio: 16 / 5;
     @include respond-to-max($desktopSize) {
         width: 14rem;
-        height: 3.6rem;
+    }
+    @include respond-to-max($phonePortrait) {
+        width: 11rem;
     }
 }

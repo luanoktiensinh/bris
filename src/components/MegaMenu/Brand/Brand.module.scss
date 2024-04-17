@@ -1,0 +1,50 @@
+.hide {
+    display: none;
+}
+.main {
+    padding-top: 2rem;
+    @include respond-to-min($desktopSize) {
+        position: absolute;
+        left: 50%;
+        width: 100vw;
+        transform: translateX(-50%);
+        background: #f8f8f8;
+        padding: 0 3.2rem;
+        box-shadow: 0 5px 10px rgba(0,0,0,.3);
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+        overflow: hidden;
+    }
+    @include respond-to-max($desktopSize) {
+        margin-left: -1.6rem;
+        margin-right: -1.6rem;
+    }
+}
+.title {
+    color: #000;
+    font-weight: 700;
+    font-size: $font-size--xl;
+    margin-bottom: 2rem;
+}
+:global(.row) {
+    @include respond-to-min($desktopSize) {
+        .left {
+            padding-right: 4rem;
+        }
+        .right {
+            padding-left: 4rem;
+        }
+    }
+    @include respond-to-max($desktopSize) {
+        .left, .right {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .right {
+            order: -1
+        }
+    }
+}
+.spacing {
+    height: 3rem;
+}

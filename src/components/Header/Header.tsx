@@ -8,9 +8,11 @@ import { HeaderActionAccount } from "../Actions";
 import { HeaderActionWishlist } from "../Actions/Wishlist";
 import { HeaderActionMiniCart } from "../Actions/MiniCart";
 import { MegaMenuToggler } from "../MegaMenu/Toggler";
+import { MegaMenu } from "../MegaMenu";
+import { MegaMenuMobile } from "../MegaMenu/Mobile";
 const Header = () => {
     return (
-        <header>
+        <header className={styles.root}>
             <HeaderBanner />
             <HeaderPanel />
             <div className="container">
@@ -35,7 +37,9 @@ const Header = () => {
                     <HeaderActionWishlist />
                     <HeaderActionMiniCart />
                 </div>
+                <MegaMenu />
             </div>
+            <MegaMenuMobile />
         </header>
     )
 }

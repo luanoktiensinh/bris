@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import '@/styles/globals.scss';
 import { ApolloWrapper } from "@/wrapper/ApolloWrapper";
 import { Header } from "@/components/Header";
+import { ReduxProvider } from "@/providers/reduxProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,12 +19,14 @@ export default function RootLayout({
 }>) {
   
   return (
-    <html lang="en">
+    <html lang="en" id="html-body">
       <body className={inter.className}>
-        <ApolloWrapper>
-          <Header />
-          {children}
-        </ApolloWrapper>
+        <ReduxProvider>
+          <ApolloWrapper>
+            <Header />
+            {children}
+          </ApolloWrapper>
+        </ReduxProvider>
       </body>
     </html>
   );

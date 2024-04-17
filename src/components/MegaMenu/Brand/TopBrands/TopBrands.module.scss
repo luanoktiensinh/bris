@@ -1,0 +1,42 @@
+.main {
+    position: relative;
+    height: 100%;
+}
+.overlaya {
+    position: absolute;
+    left: -4rem;
+    top: -10rem;
+    bottom: -10rem;
+    width: 100vw;
+    background-color: #f0f0f0;
+    z-index: -1;
+}
+.title {
+    color: #000;
+    font-weight: 700;
+    font-size: $font-size--xl;
+    margin-bottom: 1.8rem;
+    @include respond-to-max($desktopSize) {
+        display: none
+    }
+}
+.list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    @include respond-to-max($desktopSize) {
+        grid-template-columns: repeat(3, 1fr);
+        background-color: #ececec;
+        padding: 1.6rem;
+        margin-bottom: 2rem;
+    }
+}
+.item {
+    padding: 0.5rem;
+    @include flex-center;
+    justify-content: center;
+    background: #fff;
+    @include respond-to-max($desktopSize) {
+        height: 6.5rem;
+    }
+}
