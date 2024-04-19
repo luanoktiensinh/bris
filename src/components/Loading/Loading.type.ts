@@ -1,4 +1,5 @@
 export interface ILoadingProps {
     center?: boolean,
-    small?: boolean
+    small?: boolean,
+    customClass?: string
 }

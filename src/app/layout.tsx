@@ -4,6 +4,9 @@ import '@/styles/globals.scss';
 import { ApolloWrapper } from "@/wrapper/ApolloWrapper";
 import { Header } from "@/components/Header";
 import { ReduxProvider } from "@/providers/reduxProvider";
+import dynamic from "next/dynamic";
+
+const Footer = dynamic(() => import("../components/Footer").then(mod => mod.Footer));
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +28,7 @@ export default function RootLayout({
           <ApolloWrapper>
             <Header />
             {children}
+            <Footer />
           </ApolloWrapper>
         </ReduxProvider>
       </body>

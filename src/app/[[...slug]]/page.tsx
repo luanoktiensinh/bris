@@ -5,7 +5,6 @@ import { resolveRoute, useResolveRoute } from "@/hooks/resolveURL/useResolveURL"
 import { getClient } from "@/lib/apolloClient";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { HeroCarousel } from "@/components/HeroCarousel";
 
 interface IPage {
     params: {
