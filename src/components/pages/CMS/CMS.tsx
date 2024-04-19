@@ -7,8 +7,6 @@ export const CMSPage = ({
     return (
         <>
             <HeroCarousel />
-<!--             <div dangerouslySetInnerHTML={{__html: content}}></div>
-            <div dangerouslySetInnerHTML={{__html: bottom_content}}></div> -->
         </>
     )
 }
