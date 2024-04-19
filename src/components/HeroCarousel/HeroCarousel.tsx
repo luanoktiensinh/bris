@@ -26,15 +26,19 @@ const HeroCarousel = () => {
                     {data?.items?.map((item, index) => (
                         <SwiperSlide key={index} virtualIndex={index} className="hero-banner-block height-full in-homepage">
                             <Link href="/" className={"d-block"}>
-                                <Image
-                                    src={item.image_url?.src}
-                                    alt={item.name}
-                                    priority={index === 0 ? true : false}
-                                    width={0}
-                                    height={0}
-                                    sizes="100vw"
-                                    style={{ width: '100%', height: 'auto' }}
-                                />
+                                <picture>
+                                    <source media="(max-width:767px)" srcSet={item.image_url_mobile?.src} />
+                                    <source media="(min-width:768px)" srcSet={item.image_url?.src} />
+                                    <Image
+                                        src={item.image_url_mobile?.src}
+                                        alt={item.name}
+                                        priority={index === 0 ? true : false}
+                                        width={0}
+                                        height={0}
+                                        sizes="100vw"
+                                        style={{ width: '100%', height: 'auto' }}
+                                    />
+                                </picture>
                             </Link>
                         </SwiperSlide>
                     ))}
