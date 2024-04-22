@@ -3,6 +3,15 @@
 import styles from './Subscribe.module.scss';
 import { useSubscribe } from "./useSubscribe";
 import { Loading } from '@/components/Loading';
+import paymentImg1 from "@/images/payment/bris-brand-1.png";
+import paymentImg2 from "@/images/payment/bris-brand-2.png";
+import paymentImg3 from "@/images/payment/bris-brand-3.png";
+import paymentImg4 from "@/images/payment/bris-brand-4.png";
+import paymentImg5 from "@/images/payment/bris-brand-5.png";
+import paymentImg6 from "@/images/payment/bris-brand-6.png";
+import paymentImg7 from "@/images/payment/bris-brand-7.png";
+import paymentImg8 from "@/images/payment/bris-brand-8.png";
+import Image from 'next/image';
 
 export const Subscribe = () => {
     const { handleSubmit, subscribeError, subscribeSuccess, loading } = useSubscribe();
@@ -59,6 +68,16 @@ export const Subscribe = () => {
                 <p className={styles.mailingListCdc}>
                     By creating an account you agree to Briscoes <a href="https://www.briscoes.co.nz/shopping-online/privacy/">Privacy Policy</a> and <a href="https://www.briscoes.co.nz/shopping-online/terms-and-conditions/">Terms of Use</a>
                 </p>
+            </div>
+            <div className={styles.payment}>
+                <Image src={paymentImg1} alt="Payment" priority={false} width={115} height={26} />
+                <Image src={paymentImg2} alt="Payment" priority={false} width={115} height={26} />
+                <Image src={paymentImg3} alt="Payment" priority={false} width={115} height={26} />
+                <Image src={paymentImg4} alt="Payment" priority={false} width={115} height={26} />
+                <Image src={paymentImg5} alt="Payment" priority={false} width={115} height={26} />
+                <Image src={paymentImg6} alt="Payment" priority={false} width={115} height={26} />
+                <Image src={paymentImg7} alt="Payment" priority={false} width={115} height={26} />
+                <Image src={paymentImg8} alt="Payment" priority={false} width={115} height={26} />
             </div>
         </div>
     )

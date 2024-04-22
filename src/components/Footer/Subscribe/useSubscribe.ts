@@ -1,11 +1,10 @@
 import { useMutation } from '@apollo/client';
-import { FormEvent } from 'react'
+import { FormEvent } from 'react';
 
 import { SUBSCRIBE_TO_NEWSLETTER } from "./Subscribe.gql";
 import { useCallback, useState } from 'react';
 
 export const useSubscribe = () => {
-    // const client = getClient();
 
     const [subscribeError, setSubscribeError] = useState([]);
     const [subscribeSuccess, setSubscribeSuccess] = useState(false);
@@ -13,16 +12,16 @@ export const useSubscribe = () => {
 
     const clearMessage = () => {
         setSubscribeError([]);
-        setSubscribeSuccess(false)
+        setSubscribeSuccess(false);
     }
 
     const [ subscribeNewsLetter ] = useMutation(SUBSCRIBE_TO_NEWSLETTER, {
         fetchPolicy: 'no-cache',
         onError: (e: any) => {
-            setSubscribeError(e?.graphQLErrors || [])
+            setSubscribeError(e?.graphQLErrors || []);
         },
         onCompleted: () => {
-            setSubscribeSuccess(true)
+            setSubscribeSuccess(true);
         }
     });
 
@@ -30,11 +29,11 @@ export const useSubscribe = () => {
 
         async (event: FormEvent<HTMLFormElement>) => {
             try {
-                event.preventDefault()
-                setLoading(true)
-                clearMessage()
+                event.preventDefault();
+                setLoading(true);
+                clearMessage();
 
-                const formData = new FormData(event.currentTarget)
+                const formData = new FormData(event.currentTarget);
                                 
                 await subscribeNewsLetter({
                     variables: Object.fromEntries(formData)
@@ -45,7 +44,7 @@ export const useSubscribe = () => {
                     console.error(error);
                 }
             } finally {
-                setLoading(false)
+                setLoading(false);
             }
         },
         [subscribeNewsLetter]
