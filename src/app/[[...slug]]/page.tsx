@@ -22,7 +22,7 @@ export async function generateMetadata(
         title: data.route.meta_title || data.route.title,
         description: data.route.meta_description,
         keywords: data.route.meta_keywords,
-    }
+    };
 }
 
 const Page = async ({ params }: IPage) => {
@@ -40,6 +40,6 @@ const Page = async ({ params }: IPage) => {
                 )
 
         }
-    </>
-}
+    </>;
+};
 export default Page;

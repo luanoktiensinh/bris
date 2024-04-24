@@ -1,9 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import megaMenuReducer from "./features/megaMenu/MegaMenuSlide";
+import MegaMenuReducer from "./features/megaMenu/MegaMenuSlide";
+import GlobalModalSlide from "./features/globalModal/GlobalModalSlide";
+import GlobalSlide from "./features/global/GlobalSlide";
 
 export const store = configureStore({
     reducer: {
-        megaMenu: megaMenuReducer
+        megaMenu: MegaMenuReducer,
+        globalModal: GlobalModalSlide,
+        global: GlobalSlide
     }
 });
 export type RootState = ReturnType<typeof store.getState>;

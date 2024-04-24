@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Loading } from "@/components/Loading";
 import { useAppSelector } from "@/store/hooks";
 import { Suspense, lazy } from "react";
@@ -9,5 +9,5 @@ export const MegaMenuMobile = () => {
         <Suspense fallback={<Loading center small />}>
             <MegaMenuMobileContainer />
         </Suspense>
-    )
+    );
 };

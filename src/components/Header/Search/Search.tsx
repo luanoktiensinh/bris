@@ -15,5 +15,5 @@ export const HeaderSearch = ({
         <button className={styles['input-icon']} title="search">
             <SearchIcon />
         </button>
-    </div>
-}
+    </div>;
+};

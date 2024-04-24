@@ -1,1 +1,1 @@
-export * from './MiniCart'
+export * from './MiniCart';

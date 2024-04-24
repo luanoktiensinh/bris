@@ -1,4 +1,4 @@
-import { IMegaMenuItemDetailProps } from "./Detail.type"
+import { IMegaMenuItemDetailProps } from "./Detail.type";
 import styles from './Detail.module.scss';
 import { useMemo } from "react";
 import Link from "next/link";
@@ -65,5 +65,5 @@ export const MegaMenuItemDetail = ({
                 items={footer_icons}
             />
         </div>
-    </div>
-}
+    </div>;
+};

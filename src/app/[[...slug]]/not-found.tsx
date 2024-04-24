@@ -9,6 +9,6 @@ const NotFound = () => {
             sizes="100vw"
             style={{ width: '100%', height: 'auto' }}
         />
-    </div>
-}
+    </div>;
+};
 export default NotFound;

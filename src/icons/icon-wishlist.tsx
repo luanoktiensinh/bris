@@ -6,4 +6,4 @@ export const WishlistIcon = (props: any) => (
             </g>
         </g>
     </svg>
-)
+);

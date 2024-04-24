@@ -1,4 +1,4 @@
-import { getClient } from "@/lib/apolloClient"
+import { getClient } from "@/lib/apolloClient";
 import { GET_MEGAMENU_GQL } from "./MegaMenu.gql";
 import { IMegaMenuItem, IMegaMenuResponse } from "./MegaMenu.type";
 import { cloneDeep } from "lodash";
@@ -24,7 +24,7 @@ export const useMegaMenu = () => {
             children: [],
         });
         return items;
-    }
+    };
     const getData = async () => {
         const { data } = await client.query<IMegaMenuResponse>({
             query: GET_MEGAMENU_GQL
@@ -32,8 +32,8 @@ export const useMegaMenu = () => {
         const _data = cloneDeep(data);
         _data.getDynamicMenu.menu_items = formatItems(_data.getDynamicMenu.menu_items);
         return _data.getDynamicMenu;
-    }
+    };
     return {
         getData
-    }
-}
+    };
+};

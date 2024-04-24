@@ -17,5 +17,5 @@ export const MegaMenuFooter = ({
             }
             
         </div>
-    )
-}
+    );
+};

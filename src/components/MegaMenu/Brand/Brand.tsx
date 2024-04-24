@@ -27,5 +27,5 @@ export const MegaMenuBrand = ({
             </div>
         </div>
        
-    )
-}
+    );
+};

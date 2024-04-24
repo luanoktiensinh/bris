@@ -7,7 +7,6 @@ export const GET_MEGAMENU_GQL = gql`
 				id
 				name
 				link
-				right_content
 				children {
 					name
 					link

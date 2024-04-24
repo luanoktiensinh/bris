@@ -1,0 +1,17 @@
+.main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.6rem;
+    @include respond-to-max($desktopSize) {
+        grid-template-columns: repeat(3, 1fr);
+        :global(div:nth-child(n + 4)) {
+            display: none;
+        }
+    }
+    @include respond-to-max($tabletSize) {
+        grid-template-columns: repeat(2, 1fr);
+        :global(div:nth-child(n + 3)) {
+            display: none;
+        }
+    }
+}

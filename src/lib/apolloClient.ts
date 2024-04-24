@@ -10,10 +10,18 @@ export const { getClient } = registerApolloClient(() => {
         link: new HttpLink({
             uri: beURL + "/graphql",
             fetchOptions: {
-                next: {
-                    tags: [ REVALIDATE_TAGS.APOLLO ]
-                }
+                cache: "no-store",
             }
-        })
+        }),
+        defaultOptions: {
+            watchQuery: {
+              fetchPolicy: 'no-cache',
+              errorPolicy: 'all'
+            },
+            query: {
+              fetchPolicy: 'no-cache',
+              errorPolicy: 'all'
+            },
+          },
     });
 });

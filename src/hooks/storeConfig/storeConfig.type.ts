@@ -1,5 +1,9 @@
 export interface IStoreConfigData {
-    storeConfig: IStoreConfig
+    storeConfig: IStoreConfig,
+    currency: ICurrency
+}
+interface ICurrency {
+    base_currency_code: string
 }
 interface IStoreConfig {
     store_code: string,

@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { setMobileComponentLoaded, setShowMiniCart } from '@/store/features/megaMenu/MegaMenuSlide';
 import styles from './Toggler.module.scss';
@@ -12,7 +12,7 @@ export const MegaMenuToggler = () => {
         dispatch(setShowMiniCart(!showMiniCart));
         !mobileComponentLoaded && startTransition(() => {
             dispatch(setMobileComponentLoaded(true));
-        })
+        });
     }, [dispatch, showMiniCart, mobileComponentLoaded]);
     return <button
         className={showMiniCart ? styles.main_active : styles.main}
@@ -22,5 +22,5 @@ export const MegaMenuToggler = () => {
         <span className={styles.line}/>
         <span className={styles.line}/>
         <span className={styles.line}/>
-    </button>
-}
+    </button>;
+};

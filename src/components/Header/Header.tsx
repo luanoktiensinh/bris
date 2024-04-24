@@ -41,6 +41,6 @@ const Header = () => {
             </div>
             <MegaMenuMobile />
         </header>
-    )
-}
+    );
+};
 export default Header;

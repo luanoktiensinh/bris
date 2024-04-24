@@ -10,7 +10,7 @@ const brands = [
     { src: '/images/brands/panasonic.jpg', alt: 'panasonic' },
     { src: '/images/brands/nespresso.jpg', alt: 'nespresso' },
     { src: '/images/brands/samsung.jpg', alt: 'samsung' }
-]
+];
 export const TopBrands = () => {
     return <div className={styles.main}>
         <div className={styles.overlay}></div>
@@ -25,4 +25,4 @@ export const TopBrands = () => {
             }
         </div>
     </div>;
-}
+};

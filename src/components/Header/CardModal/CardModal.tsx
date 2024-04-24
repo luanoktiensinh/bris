@@ -1,4 +1,4 @@
-import { ICardModal } from "./CardModal.type"
+import { ICardModal } from "./CardModal.type";
 import styles from './CardModal.module.scss';
 import Image from "next/image";
 export const CardModal = ({
@@ -12,5 +12,5 @@ export const CardModal = ({
                 <p className={styles.value}>{value}</p>
             </div>
         </button>
-    </div>
-}
+    </div>;
+};

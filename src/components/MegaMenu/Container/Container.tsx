@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { IMegaMenuContainerProps } from "./Container.type";
 import styles from './Container.module.scss';
 import { MegaMenuItem } from "../Item";
@@ -13,7 +13,7 @@ export const MegaMenuContainer = ({
     const dispatch = useAppDispatch();
     useEffect(() => {
         dispatch(setData(data));
-    })
+    });
     const [ selected, setSelected ] = useState<IMegaMenuItem>();
     return <div className={styles.main}>
         {
@@ -27,5 +27,5 @@ export const MegaMenuContainer = ({
                 />
             ))
         }
-    </div>
-}
+    </div>;
+};

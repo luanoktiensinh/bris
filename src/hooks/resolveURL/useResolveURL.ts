@@ -1,4 +1,4 @@
-import { getClient } from "@/lib/apolloClient"
+import { getClient } from "@/lib/apolloClient";
 import { GQL_RESOLVE_URL } from "./resolveURL.gql";
 import { IResolveRouteResponse } from "./resolveURL.type";
 import { cache } from "react";
@@ -18,5 +18,5 @@ export const useResolveRoute = (pathname: string) => {
     const client = getClient();
     return {
         resolve: resolveRoute.bind(null, client, pathname)
-    }
-}
+    };
+};

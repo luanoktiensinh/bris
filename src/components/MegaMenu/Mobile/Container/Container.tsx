@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import styles from './Container.module.scss';
 import { ArrowRightIcon } from '@/icons/arrow-right';
 import { PlusIcon } from '@/icons/icon-plus';
@@ -71,5 +71,5 @@ export const MegaMenuMobileContainer = () => {
                 )
             }
         </div>
-    )
-}
+    );
+};

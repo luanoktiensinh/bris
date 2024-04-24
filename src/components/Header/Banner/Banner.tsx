@@ -5,5 +5,5 @@ export const HeaderBanner = () => {
         <div className="container">
             GET $10 OFF YOUR FIRST ORDER OVER $50!* <Link href='/register'>SIGN UP NOW</Link>
         </div>
-    </div>
-}
+    </div>;
+};

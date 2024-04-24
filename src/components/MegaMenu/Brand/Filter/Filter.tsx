@@ -8,14 +8,20 @@ import Link from 'next/link';
 const CHARS = 'abcdefghijklmnopqrstuvwxyz'.split('');
 export const BrandFilter = () => {
     const [ charSelected, setCharSelected ] = useState(CHARS[0]);
-    const { getBrands, data, error, loading } = useFilter();
+    const { getBrands, data, loading, aborterRef, setAborterRef } = useFilter();
+    
     const [ search, setSearch ] = useState(charSelected);
     useEffect(() => {
         setSearch(charSelected);
     }, [charSelected]);
     useEffect(() => {
         getBrands({variables: { search }});
-    }, [search, getBrands]);
+        return () => {
+            aborterRef.abort();
+            setAborterRef(new AbortController());
+        };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [search]);
     
     return (
         <>
@@ -60,5 +66,5 @@ export const BrandFilter = () => {
                 }
             </div> }
         </>
-    )
-}
+    );
+};

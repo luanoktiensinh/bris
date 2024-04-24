@@ -10,4 +10,4 @@ export const PlusIcon = (props: any) => (
             <path fill="none" d="M5 .5h1v10H5z"/>
         </g>
     </g>
-</svg>)
+</svg>);

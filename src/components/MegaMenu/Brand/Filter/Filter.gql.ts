@@ -10,4 +10,4 @@ export const GQL_SEARCH_BRANDS = gql`
             }
         }
     }
-`
+`;

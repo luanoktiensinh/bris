@@ -38,5 +38,5 @@ export const MegaMenuItem = ({
             }
         </div>
         
-    </div>
-}
+    </div>;
+};

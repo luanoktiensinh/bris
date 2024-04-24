@@ -4,6 +4,7 @@ import { IFooterBlock } from './Footer.type';
 import { useFooter } from "./useFooter"
 import { FooterColumn } from './Footertem';
 import { Subscribe } from "./Subscribe";
+import cureKidImg from "@/images/curekids_white.png";
 
 export const Footer = async () => {
     const { getData } = useFooter();
@@ -21,7 +22,7 @@ export const Footer = async () => {
                     <ul className={styles["footer-nav"]}>
                         <li className={styles["footer-nav-item"]}>
                             <span className={`${styles["footer-nav-link"]}`}>We Proudly Support</span>
-                            <a href="/cure-kids/" className={styles["footer-logo"]}><img src="https://www.briscoes.co.nz/globalassets/globalblocks/footer/charities/curekids_white.png" alt="CureKids.png" width="268" height="56" /></a>
+                            <a href="/cure-kids/" className={styles["footer-logo"]}><img src={cureKidImg.src} alt="CureKids.png" width="268" height="56" /></a>
                         </li>
                     </ul>
                 </div>

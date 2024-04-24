@@ -4,5 +4,5 @@ import Link from 'next/link';
 export const HeaderActionWishlist = () => {
     return <Link className={styles.btn} href="/wishlist" title="wishlist">
             <WishlistIcon />
-        </Link>
-}
+        </Link>;
+};

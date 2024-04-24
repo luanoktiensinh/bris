@@ -44,5 +44,5 @@ export const HeaderPanel = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};

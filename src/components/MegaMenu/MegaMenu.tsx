@@ -4,5 +4,5 @@ import { useMegaMenu } from "./useMegaMenu";
 export const MegaMenu = async () => {
     const { getData } = useMegaMenu();
     const data = await getData();
-    return <MegaMenuContainer data={data} />
-}
+    return <MegaMenuContainer data={data} />;
+};

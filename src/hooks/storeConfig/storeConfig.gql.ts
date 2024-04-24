@@ -8,5 +8,8 @@ export const GQL_STORE_CONFIG = gql`
 			__typename
 			header_logo_src
 		}
+		currency {
+            base_currency_code
+        }
 	}
 `;

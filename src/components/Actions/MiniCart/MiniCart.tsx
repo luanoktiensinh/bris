@@ -5,5 +5,5 @@ export const HeaderActionMiniCart = () => {
         <button className={styles.btn} title="Mini cart">
             <ShoppingCartIcon />
         </button>
-    </div>
-}
+    </div>;
+};

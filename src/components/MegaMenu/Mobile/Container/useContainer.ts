@@ -24,10 +24,10 @@ export const useMegaMenuMobileContainer = () => {
         else {
             dispatch(setSelected(undefined));
         }
-    }
+    };
     const back = () => {
         selectItem(undefined, parent || null);
-    }
+    };
 
     return {
         data,
@@ -36,5 +36,5 @@ export const useMegaMenuMobileContainer = () => {
         itemSelected,
         back,
         selectItem
-    }
-}
+    };
+};
