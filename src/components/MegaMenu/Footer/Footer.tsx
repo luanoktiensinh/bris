@@ -9,7 +9,7 @@ export const MegaMenuFooter = ({
         <div className={styles.footer}>
             {
                 items.map(footer_icon => (
-                    <Link href={footer_icon.link} className={styles.footer__item} key={footer_icon.name}>
+                    <Link href={footer_icon.link || '#'} className={styles.footer__item} key={footer_icon.name}>
                         <Image src={footer_icon.image} width={22} height={20} alt={footer_icon.name}/>
                         <span>{footer_icon.name}</span>
                     </Link>
