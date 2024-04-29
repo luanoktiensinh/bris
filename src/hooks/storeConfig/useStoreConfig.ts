@@ -6,7 +6,8 @@ export const useStoreConfig = () => {
     const client = getClient();
     const get = async() => {
         const { data, error } = await client.query<IStoreConfigData>({
-            query: GQL_STORE_CONFIG
+            query: GQL_STORE_CONFIG,
+            fetchPolicy: 'cache-first'
         });
         return { data, error };
     };

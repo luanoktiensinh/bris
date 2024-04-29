@@ -17,7 +17,7 @@ export const ProductRecommendedPrice = ({
         return prices
             .map((price, index) => (
                 <Fragment key={price}>
-                    <Price key={price} money={price} locale={locale} currencyCode={currencyCode}/>
+                    <Price key={price} money={price} locale={locale || ""} currencyCode={currencyCode || ""}/>
                     {index < prices.length -1 ? ' - ' : ''}
                 </Fragment>
             ));

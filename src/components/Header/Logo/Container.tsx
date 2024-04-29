@@ -16,15 +16,15 @@ export const LogoContainer = ({
     const dispatch = useAppDispatch();
     const init = useRef(false);
     if(!init.current) {
-        dispatch(setLocale(data.storeConfig.locale));
-        dispatch(setCurrencyCode(data.currency.base_currency_code));
+        dispatch(setLocale(data.storeConfig?.locale));
+        dispatch(setCurrencyCode(data.currency?.base_currency_code));
         init.current = true;
     }
     return (
         <Link className={classes ?? ''} href="/">
             <Image
                 className={styles.logo}
-                src={error ? '/images/logo.png' : `/media/logo/${data.storeConfig.header_logo_src}`}
+                src={error ? '/images/logo.png' : `/media/logo/${data.storeConfig?.header_logo_src}`}
                 width={200}
                 height={50}
                 alt="Briscoes logo"

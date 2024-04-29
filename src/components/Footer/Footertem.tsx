@@ -1,7 +1,8 @@
 
-'use client'
+'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import styles from './Footer.module.scss';
 import { IFooterBlock, IFooterItem } from './Footer.type';
 
@@ -15,11 +16,11 @@ export const FooterColumn = ({item}: {item: IFooterBlock}) => {
                 <div className={`${styles["footer-dropdown"]}`}>
                     {
                         item.items.map((childItem: IFooterItem, idx) => (
-                            <a key={childItem.linkurl + idx} className={`${styles["footer-dropdown-item"]}`} href={childItem.linkurl}>{childItem.linktext}</a>
+                            <Link key={childItem.linkurl + idx} className={`${styles["footer-dropdown-item"]}`} href={childItem.linkurl}>{childItem.linktext}</Link>
                         ))
                     }
                 </div>
             </li>
         </ul>
-    )
-}
+    );
+};

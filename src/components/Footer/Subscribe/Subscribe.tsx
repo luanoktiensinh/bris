@@ -12,6 +12,7 @@ import paymentImg6 from "@/images/payment/bris-brand-6.png";
 import paymentImg7 from "@/images/payment/bris-brand-7.png";
 import paymentImg8 from "@/images/payment/bris-brand-8.png";
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const Subscribe = () => {
     const { handleSubmit, subscribeError, subscribeSuccess, loading } = useSubscribe();
@@ -66,7 +67,7 @@ export const Subscribe = () => {
                     }
                 </form>
                 <p className={styles.mailingListCdc}>
-                    By creating an account you agree to Briscoes <a href="https://www.briscoes.co.nz/shopping-online/privacy/">Privacy Policy</a> and <a href="https://www.briscoes.co.nz/shopping-online/terms-and-conditions/">Terms of Use</a>
+                    By creating an account you agree to Briscoes <Link href="https://www.briscoes.co.nz/shopping-online/privacy/">Privacy Policy</Link> and <Link href="https://www.briscoes.co.nz/shopping-online/terms-and-conditions/">Terms of Use</Link>
                 </p>
             </div>
             <div className={styles.payment}>
