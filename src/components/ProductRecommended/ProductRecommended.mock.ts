@@ -7,6 +7,7 @@ export const product: IProductRecommended[] =  [
         title: 'Hampton & Mason Perfection Non Stick Frypan 20cm',
         price: 36.99,
         image: '/images/product/product_1.jpg',
+        sku: "100000004"
     },
     {
         id: 2,
@@ -33,14 +34,15 @@ export const product: IProductRecommended[] =  [
                     }
                 ]
             }
-        ]
+        ],
+        sku: "100000003"
     },
     {
         id: 3,
         url: '#',
         title: 'Hampton & Mason 26cm Frypan',
         price: [20, 39.99],
-        image: '/images/product/product_3.jpg',
+        image: '/images/product/product_3.jpg'
     },
     {
         id: 4,
@@ -97,6 +99,6 @@ export const product: IProductRecommended[] =  [
         url: '#',
         title: 'Royal Doulton Stirling Fitted Sheet',
         price: 39.99,
-        image: '/images/product/product_2.jpg',
+        image: '/images/product/product_2.jpg'
     }
 ];

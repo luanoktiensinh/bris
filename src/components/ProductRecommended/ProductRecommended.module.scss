@@ -43,3 +43,22 @@ $color-main: #00589f;
     margin-bottom: 5rem;
     font-weight: 700;
 }
+.in_minicart {
+    &.main {
+        margin: 0 -2rem;
+        padding: 1rem 0;
+        background-color: #f3f4f6;
+    }
+    .title {
+        font-size: $font-size--sm;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+        padding-bottom: 1.2rem;
+        border-bottom: 2px solid #d3d3d3;
+    }
+    :global { 
+        .swiper-scrollbar {
+            margin-top: 1rem;
+        }
+    }
+}

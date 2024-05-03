@@ -5,5 +5,7 @@ export interface IInputPros {
     max?: number,
     step?: number,
     placeholder?: string,
-    onChange?: (value: number | string) => void
+    onChange?: (value: number | string) => void,
+    btnRight?: boolean,
+    changeWhenBlur?: boolean
 }

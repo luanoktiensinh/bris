@@ -40,7 +40,7 @@ export const MegaMenuMobileContainer = () => {
                 ): items.map(item => (
                     <Link
                         key={item.id}
-                        href={item.link}
+                        href={item.link ?? '#'}
                         className={item.level > 0 ? styles.item__small : styles.item}
                         onClick={(e) => selectItem(e, item)}
                     >
@@ -60,7 +60,7 @@ export const MegaMenuMobileContainer = () => {
                             data?.footer_icons.map(footerIcon => (
                                 <Link
                                     key={footerIcon.name}
-                                    href={footerIcon.link}
+                                    href={footerIcon.link  ?? '#'}
                                     className={styles.footer__link}
                                 >
                                     {footerIcon.name}

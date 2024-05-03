@@ -2,10 +2,13 @@ import { IInputPros } from "./Input.type";
 import styles from './Input.module.scss';
 import { lazy, useCallback, useMemo } from "react";
 import { useHelpers } from "@/app/helpers";
+import { debounce } from "lodash";
 const MinusIcon = lazy(() => import('@/icons/minus').then(mod => ({default: mod.MinusIcon})));
 const PlusIcon = lazy(() => import('@/icons/plus').then(mod => ({default: mod.PlusIcon})));
 export const Input = ({
-    type, max, min, step, value, onChange
+    type, max, min, step, value, btnRight, 
+    changeWhenBlur, 
+    onChange
 }: IInputPros) => {
     const { numBetween } = useHelpers();
     const numValue = useMemo(() => parseFloat((value ?? 0) + ''), [value]);
@@ -34,15 +37,16 @@ export const Input = ({
     }, [onChange, type, numMax, numMin]);
     
     return (
-        <div className={styles.main}>
+        <div className={`${styles.main} ${btnRight ? styles.btn_right : ''}`}>
             <input
+                key={value}
                 className={styles.input}
                 type={type}
-                value={value}
+                defaultValue={value}
                 min={min ?? undefined}
                 max={max ?? undefined}
                 step={step ?? undefined}
-                onChange={(e) => onChangeInput(e.target.value)}
+                onChange={debounce((e) => onChangeInput(e.target.value), 250)}
             />
             {
                 type === 'number' && (<>

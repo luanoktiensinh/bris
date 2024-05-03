@@ -1,0 +1,1 @@
+export const ADDED_PRODUCT = 'added_product';

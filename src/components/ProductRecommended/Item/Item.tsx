@@ -6,8 +6,10 @@ import { MouseEvent, useMemo } from "react";
 import { ProductRecommendedPrice } from "../Price";
 export const ProductRecommendedItem = ({
     data,
+    inMiniCart,
     onSelect
 }: IProductRecommendedItemsProps) => {
+    const limitColor = useMemo(() => inMiniCart ? 4 : 5, [inMiniCart]);
     const openQuickView = (e: MouseEvent, id: number) => {
         e.preventDefault();
         e.stopPropagation();
@@ -22,7 +24,7 @@ export const ProductRecommendedItem = ({
     }, [data]);
     
     return (
-        <Link href={data.url} className={styles.main}>
+        <Link href={data.url} className={`${styles.main} ${inMiniCart ? styles.in_minicart : ''}`}>
             <Image
                 className={styles.image}
                 src={data.image}
@@ -36,7 +38,7 @@ export const ProductRecommendedItem = ({
                 colors?.items.length && (
                     <div className={styles.variants}>
                         {
-                            colors.items.slice(0, 5).map(color => (
+                            colors.items.slice(0, limitColor).map(color => (
                                 <div
                                     key={color.value}
                                     className={styles.variants__item}
@@ -46,7 +48,7 @@ export const ProductRecommendedItem = ({
                             ))
                         }
                         {
-                            colors.items.length > 5 && <div className={styles.variants__item} has-border="true">+{colors.items.length - 5}</div>
+                            colors.items.length > limitColor && <div className={styles.variants__item} has-border="true">+{colors.items.length - limitColor}</div>
                         }
                     </div>
                 )
@@ -54,7 +56,7 @@ export const ProductRecommendedItem = ({
             <div className={styles.price}>
                 <ProductRecommendedPrice price={data.price}/>
             </div>
-            <div className={styles.quickview}>
+            <div className={ styles.quickview}>
                 <button onClick={(e) => openQuickView(e, data.id)}>Quick View</button>
             </div>
         </Link>

@@ -1,4 +1,21 @@
 @import '../Action.scss';
+.main {
+    position: relative;
+}
 .btn {
     @include btnStyle
+}
+.count {
+    position: absolute;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 100%;
+    top: -0.8rem;
+    right: -0.8rem;
+    font-size: 1.1rem;
+    color: $color-secondary;
+    background-color: $color-yellow;
+    font-weight: 700;
+    @include flex-center;
+    justify-content: center;
 }

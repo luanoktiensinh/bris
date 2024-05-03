@@ -1,0 +1,18 @@
+.main {
+    @include flex-center;
+    gap: 1rem;
+    color: #000;
+    line-height: 1.5;
+}
+.image {
+    width: 6rem;
+    border: 1px solid #d6d6d6;
+}
+.title {
+    font-size: $font-size--sm;
+    font-weight: 700;
+}
+.qty {
+    color: #444;
+    font-size: $font-size--xs;
+}

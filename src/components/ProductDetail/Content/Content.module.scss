@@ -69,7 +69,7 @@
         background: #005ea7;
         border: 1px solid #005ea7;
         color: #fff;
-        &:hover {
+        &:not(.loading):hover {
             background-color: #004174;
             border-color: #003a67;
         }

@@ -6,6 +6,8 @@ import { ReduxProvider } from "@/providers/reduxProvider";
 import { GlobalModal } from "@/components/GlobalModal";
 import Script from 'next/script';
 import { Footer } from "@/components/Footer";
+import { GlobalLoading } from "@/components/GlobalLoading";
+import { Toast } from "@/components/Toast";
 
 export default function RootLayout({
   children,
@@ -17,10 +19,12 @@ export default function RootLayout({
       <body>
         <ReduxProvider>
           <ApolloWrapper>
+            <Toast />
             <Header />
             {children}
             <Footer />
             <GlobalModal />
+            <GlobalLoading />
           </ApolloWrapper>
         </ReduxProvider>
         <Script id="bris-font">

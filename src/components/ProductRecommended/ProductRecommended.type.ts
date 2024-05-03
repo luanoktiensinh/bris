@@ -13,8 +13,11 @@ export interface IProductRecommended {
     title: string,
     image: string,
     price: number | number[],
-    attributes?: IProductRecommendedAttr[]
+    attributes?: IProductRecommendedAttr[],
+    sku?: string,
+    selected_options?: string[]
 }
 export interface IProductRecommendedProps {
-    title?: string
+    title?: string,
+    inMiniCart?: boolean
 }

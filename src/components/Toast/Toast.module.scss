@@ -1,0 +1,16 @@
+.main {
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+    z-index: 999999;
+    background: #fff;
+    min-width: 10rem;
+    box-shadow: -5px 5px 20px 0px rgba(0, 0, 0, 0.1);
+    transition: all .25s ease;
+}
+.main_hide {
+    @extend .main;
+    transform: translateY(-10rem);
+    opacity: 0;
+    visibility: hidden;
+}

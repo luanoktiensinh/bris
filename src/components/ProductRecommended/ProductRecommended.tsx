@@ -22,29 +22,35 @@ import { PRODUCT_RECOMMENDED } from "../GlobalModal/GlobalModal.const";
 
 export const ProductRecommended = ({
     title = 'We think you will love these...',
+    inMiniCart
 }: IProductRecommendedProps) => {
     const dispatch = useAppDispatch();
     const { data, loading, getData } = useProductRecommended();
     const swiperOptions = useMemo<SwiperOptions>(() => ({
         modules: [ Mousewheel, Scrollbar, Navigation ],
-        slidesPerView: 2,
-        spaceBetween: 16,
+        ...(inMiniCart ? {
+            slidesPerView: 2.5,
+            spaceBetween: 20
+        }: {
+            slidesPerView: 2,
+            spaceBetween: 16,
+            breakpoints: {
+                768: {
+                    slidesPerView: 3
+                },
+                992: {
+                    slidesPerView: 4
+                }
+            },
+            navigation: true,
+        }),
         mousewheel: {
             enabled: true,
         },
         scrollbar: {
             enabled: true
-        },
-        navigation: true,
-        breakpoints: {
-            768: {
-                slidesPerView: 3
-            },
-            992: {
-                slidesPerView: 4
-            }
-        }    
-    }), []);
+        }        
+    }), [inMiniCart]);
     useEffect(() => {
         getData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -61,18 +67,18 @@ export const ProductRecommended = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     return (
-        <div className={styles.main}>
+        <div className={`${styles.main} ${inMiniCart ? styles.in_minicart  : ''}`}>
             <div className="container">
                 {
                     title && <h3 className={styles.title}>{title}</h3>
                 }
                 {
-                    loading ? <SkeletonProductRecommended /> : data && (
+                    loading ? <SkeletonProductRecommended inMiniCart/> : data && (
                         <Swiper {...swiperOptions}>
                             {
                                 data.map(product => (
                                     <SwiperSlide key={product.id}>
-                                        <ProductRecommendedItem data={product} onSelect={(id) => quickView(id)}/>
+                                        <ProductRecommendedItem data={product} inMiniCart={inMiniCart} onSelect={(id) => quickView(id)}/>
                                     </SwiperSlide>
                                 ))
                             }

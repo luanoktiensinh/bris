@@ -1,0 +1,42 @@
+.main {
+    width: 40rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    box-shadow: -5px 5px 20px 0px rgba(0, 0, 0, 0.3);
+    color: #000;
+}
+.header {
+    @include flex-center;
+    gap: 1.2rem;
+    font-weight: 700;
+    .tick {
+        width: 2.4rem;
+        height: 2.4rem;
+        padding: 0.6rem;
+        background-color: #005ea7;
+        @include flex-center;
+        justify-content: center;
+        fill: #fff;
+        border-radius: 100%;
+    }
+    .cart {
+        margin-left: auto;
+        background-color: #005ea7;
+        padding: 0.6rem 1.2rem;
+        color: #fff;
+        font-size: $font-size--sm;
+        text-decoration: none;
+        svg {
+            width: 1.2rem;
+            height: 1.2rem;
+            margin-left: 0.4rem;
+            fill: currentColor;
+        }
+    }
+}
+.list {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #d6d6d6;
+}

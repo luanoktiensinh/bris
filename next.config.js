@@ -25,6 +25,11 @@ const nextConfig = {
               hostname: 'picsum.photos',
               port: ''
             },
+            {
+              protocol: 'https',
+              hostname: 'integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud',
+              port: ''
+            },
         ],
         deviceSizes: [320, 480, 640, 750, 828, 1080, 1200, 1920, 2048, 3840]
     },

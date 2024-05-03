@@ -71,3 +71,24 @@ $color-main: #00589f;
         }
     }
 }
+.in_minicart {
+    .title {
+        font-size: $font-size--xs;
+        margin-top: 0.5rem;
+        -webkit-line-clamp: 1;
+        height: 1.6rem;
+    }
+    .price {
+        font-size: $font-size--xs;
+        line-height: 1.8rem;
+        margin-top: 0;
+    }
+    .quickview {
+        button {
+            margin-top: 1.5rem;
+            height: 3.5rem;
+            line-height: 3.5rem;
+            padding: 0 1.8rem
+        }
+    }
+}

@@ -1,15 +1,22 @@
 import { IProductDetailContentProps, ProductDetailContentSelected } from "./Content.type";
 import styles from './Content.module.scss';
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { TickIcon } from "@/icons/tick";
 import { Input } from "@/components/Fields";
 import { HeartFillIcon } from "@/icons/heart-solid";
 import { HeartIcon } from "@/icons/heart";
 import Link from "next/link";
 import { ProductRecommendedPrice } from "@/components/ProductRecommended/Price";
+import { useCart } from "@/hooks/cart/useCart";
+import { Loading } from "@/components/Loading";
+import { useAppDispatch } from "@/store/hooks";
+import { setConfig } from "@/store/features/toast/ToastSlide";
 export const ProductDetailContent = ({
     data, changeVariant
 }: IProductDetailContentProps) => {
+    const dispatch = useAppDispatch();
+    const { addProduct } = useCart();
+    const [ loading ,setLoading ] = useState(false);
     const [ selected, setSelected ] = useState<ProductDetailContentSelected>({});
     const [ quantity, setQuantity ] = useState(1);
     const [ addedWishlist, setAddedWishlist ] = useState(false);
@@ -20,6 +27,25 @@ export const ProductDetailContent = ({
         if(changeVariant) changeVariant();
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selected]);
+    const onAddProduct = useCallback(async () => {
+        setLoading(true);
+        if(data.sku) {
+            const { errors } = await addProduct({
+                product: {
+                    quantity,
+                    sku: data.sku
+                }
+            });
+            !errors?.length && dispatch(setConfig({
+                type: "added_product",
+                props: {
+                    uid: data.sku
+                }
+            }));
+        }
+        setLoading(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [data, quantity, addProduct]);
     return (
         <div className={styles.main}>
             <h3 className={styles.title} dangerouslySetInnerHTML={{__html: data.title}} />
@@ -66,7 +92,14 @@ export const ProductDetailContent = ({
             </div>
             </div>
             <div className={styles.actions}>
-                <button className={styles.actions__addcart}>Add to cart</button>
+                <button
+                    className={`${styles.actions__addcart} ${loading ? styles.loading : ''}`}
+                    onClick={onAddProduct}
+                >
+                    {
+                        loading ? <Loading small/> : 'Add to cart'
+                    }
+                </button>
                 <button
                     className={styles.actions__wishlist}
                     onClick={() => setAddedWishlist(!addedWishlist)}

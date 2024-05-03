@@ -43,15 +43,16 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .row {
+    --gap: 1rem;
     display: flex;
     flex-wrap: wrap;
-    margin-right: -1rem;
-    margin-left: -1rem;
+    margin-right: calc(var(--gap) * -1);
+    margin-left: calc(var(--gap) * -1);
     & > [class^='col'] {
         position: relative;
         width: 100%;
-        padding-right: 1rem;
-        padding-left: 1rem;
+        padding-right: var(--gap);
+        padding-left: var(--gap);
     }
 }
 .col-1 {
