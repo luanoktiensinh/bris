@@ -7,10 +7,12 @@ import { Subscribe } from "./Subscribe";
 import Link from 'next/link';
 import Image from 'next/image';
 import cureKidImg from "@/images/curekids_white.png";
+import {getTranslations} from 'next-intl/server';
 
 export const Footer = async () => {
     const { getData } = useFooter();
     const footerData = await getData();
+    const t = await getTranslations('');
     return (
         <footer className={styles.footer}>
             <Subscribe />
@@ -23,7 +25,7 @@ export const Footer = async () => {
                     }
                     <ul className={styles["footer-nav"]}>
                         <li className={styles["footer-nav-item"]}>
-                            <span className={`${styles["footer-nav-link"]}`}>We Proudly Support</span>
+                            <span className={`${styles["footer-nav-link"]}`}>{t('footer.weProudlySupport')}</span>
                             <Link href="/cure-kids/" className={styles["footer-logo"]}>
                                 <Image src={cureKidImg.src} alt="CureKids.png" width="268" height="56" />
                             </Link>
@@ -33,11 +35,11 @@ export const Footer = async () => {
             </div>
             <div className={styles["footer-bottom"]}>
                 <div className={`container ${styles["container"]}`}>
-                    <span className={styles["copyright"]}>Copyright © 2024 Briscoes.  All Rights Reserved.</span>
+                    <span className={styles["copyright"]}>{t('footer.copyRight')}</span>
                     <span>|</span>
-                    <Link href='#'>Privacy</Link>
+                    <Link href='#'>{t('footer.privacy')}</Link>
                     <span>|</span>
-                    <Link href='#'>Terms & Conditions</Link>
+                    <Link href='#'>{t('footer.termAndConditions')}</Link>
                 </div>
             </div>
         </footer>

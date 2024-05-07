@@ -8,14 +8,18 @@ import Script from 'next/script';
 import { Footer } from "@/components/Footer";
 import { GlobalLoading } from "@/components/GlobalLoading";
 import { Toast } from "@/components/Toast";
+import {unstable_setRequestLocale} from 'next-intl/server';
 
-export default function RootLayout({
+export default function LocaleLayout({
   children,
+  params: {locale}
 }: Readonly<{
   children: React.ReactNode;
+  params: {locale: string};
 }>) {
+  unstable_setRequestLocale(locale);
   return (
-    <html lang="en" id="html-body">
+    <html lang={locale} id="html-body">
       <body>
         <ReduxProvider>
           <ApolloWrapper>
