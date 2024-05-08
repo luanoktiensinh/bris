@@ -8,14 +8,16 @@ import { AddedProductProps } from './AddedProduct.type';
 import { useMemo } from 'react';
 import { AddedProductItem } from './Item';
 export const AddedProduct = ({
-    uid
+    sku, options
 }: AddedProductProps) => {
     const { data } = useAppSelector(state => state.miniCart);
     const { locale } = useAppSelector(state => state.global);
     const items = useMemo(() => {
-        return data?.items.filter(item => item.product.sku === uid);
-    }, [uid, data]);
-
+        return data?.items.filter(item =>
+            item.product.sku === sku &&
+            (!options?.length || item.configurable_options?.every(option => options.includes(option.configurable_product_option_value_uid)))
+        );
+    }, [sku, options, data]);
     return <div className={styles.main}>
         <div className={styles.header}>
             <TickIcon className={styles.tick}/>

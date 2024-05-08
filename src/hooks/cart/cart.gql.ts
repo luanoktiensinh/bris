@@ -1,6 +1,8 @@
 import { gql } from "@apollo/client";
+import {fragment_price_range} from "@/graphql/Product.gql";
 
 const GQL_MINICART_FRAGMENT = gql`
+    ${fragment_price_range}
     fragment MiniCartFragment on Cart{
         id
         total_quantity
@@ -24,7 +26,8 @@ const GQL_MINICART_FRAGMENT = gql`
                 uid
                 name 
                 sku 
-                url_key 
+                url_key
+                url_suffix
                 thumbnail{
                     url 
                 }
@@ -33,11 +36,18 @@ const GQL_MINICART_FRAGMENT = gql`
                     variants{
                         attributes{
                             uid
+                            code
+                            label
                         }
                         product{
                             uid
                             thumbnail{
                                 url 
+                            }
+                            url_key
+                            url_suffix
+                            price_range {
+                                ...PriceRangeCustom
                             }
                         }
                     }
@@ -55,10 +65,9 @@ const GQL_MINICART_FRAGMENT = gql`
             quantity
             ...on ConfigurableCartItem{
                 configurable_options{
-                    configurable_product_option_uid
                     option_label 
                     configurable_product_option_value_uid 
-                    value_label 
+                    value_label
                 }
             }
         }
@@ -92,7 +101,7 @@ export const GQL_ADD_CART = gql`
     mutation AddProductToCart($cartId: String!, $product: CartItemInput!) {
         addProductsToCart(cartId: $cartId, cartItems: [$product]) {
             cart {
-            id
+                id
                 ...CartFragment
                 ...MiniCartFragment
             }

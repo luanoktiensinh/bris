@@ -3,8 +3,8 @@ import styles from './Input.module.scss';
 import { lazy, useCallback, useMemo } from "react";
 import { useHelpers } from "@/app/helpers";
 import { debounce } from "lodash";
-const MinusIcon = lazy(() => import('@/icons/minus').then(mod => ({default: mod.MinusIcon})));
-const PlusIcon = lazy(() => import('@/icons/plus').then(mod => ({default: mod.PlusIcon})));
+const MinusIcon = lazy(() => import(/* webpackChunkName: "minus-icon" */ '@/icons/minus').then(mod => ({default: mod.MinusIcon})));
+const PlusIcon = lazy(() => import(/* webpackChunkName: "plus-icon" */'@/icons/plus').then(mod => ({default: mod.PlusIcon})));
 export const Input = ({
     type, max, min, step, value, btnRight, 
     changeWhenBlur, 

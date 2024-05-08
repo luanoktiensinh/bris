@@ -18,6 +18,9 @@
 .title {
     font-weight: 700;
 }
+.option {
+    font-size: $font-size--xsl;
+}
 .actions {
     align-self: center;
     @include flex-center;

@@ -5,3 +5,11 @@ type Money = {
     currency: string,
     value: number
 }
+type ProductPrice = {
+    final_price?: Money
+    regular_price?: Money
+}
+type PriceRange = {
+    maximum_price?: ProductPrice
+    minimum_price?: ProductPrice
+}

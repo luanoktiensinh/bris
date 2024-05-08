@@ -1,4 +1,4 @@
-import { IProductDetailProps } from "./ProductDetail.type";
+import {IProductDetailProps, VariantProductDetail} from "./ProductDetail.type";
 import { useProductDetail } from "./useProductDetail";
 import styles from './ProductDetail.module.scss';
 import { Loading } from "../Loading";
@@ -6,19 +6,24 @@ import { useAppDispatch } from "@/store/hooks";
 import { setShow } from "@/store/features/globalModal/GlobalModalSlide";
 import { ProductDetailImage } from "./Images";
 import { ProductDetailContent } from "./Content";
-import { useState, useEffect } from "react";
+import {useState, useMemo} from "react";
 export const ProductDetail = ({
-    id
+    sku
 }: IProductDetailProps) => {
     const dispatch = useAppDispatch();
-    const { loading, data } = useProductDetail({ id });
-    const [ image, setImage ] = useState<string>('');
-    useEffect(() => {
-      if(data) {
-        setImage(data.image);
-      }
-    }, [data]);
-    
+    const { loading, data, error } = useProductDetail({ sku });
+    const [variantSelected, setVariantSelected] = useState<VariantProductDetail>();
+    const images = useMemo(() => {
+        let gallery: ProductGallery[] = [];
+        if(variantSelected) {
+            gallery = variantSelected.product.media_gallery ?? [];
+        }
+        else {
+            gallery = data?.media_gallery ?? [];
+        }
+        return gallery.map(media => media.url ?? '') ?? [];
+    }, [data, variantSelected]);
+    if(!loading && error) return null;
     return (
         <div className={styles.main}>
             <button className={styles.close} onClick={() => dispatch(setShow(false))}>X</button>
@@ -26,10 +31,10 @@ export const ProductDetail = ({
                 loading ? <Loading small center /> : data && (
                     <div className="row">
                         <div className="col-5">
-                            <ProductDetailImage key={image} items={Array(5).fill(image)} />
+                            <ProductDetailImage items={images} />
                         </div>
                         <div className="col-7">
-                            <ProductDetailContent changeVariant={() => setImage('https://picsum.photos/400?random=' + new Date().getTime())} data={data}/>
+                            <ProductDetailContent changeVariant={setVariantSelected} data={data}/>
                         </div>
                     </div>
                 )

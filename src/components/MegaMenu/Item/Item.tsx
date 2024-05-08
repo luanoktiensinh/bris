@@ -4,8 +4,8 @@ import { IMegaMenuItemProps } from "./Item.type";
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
 import { MEGAMENU_BRANDS_ID } from "@/const/global";
-const MegaMenuBrand = dynamic(() => import("../Brand").then(mod => mod.MegaMenuBrand));
-const MegaMenuItemDetail = dynamic(() => import("./Detail").then(mod => mod.MegaMenuItemDetail));
+const MegaMenuBrand = dynamic(() => import(/* webpackChunkName: "megamenu-brand" */ "../Brand").then(mod => mod.MegaMenuBrand));
+const MegaMenuItemDetail = dynamic(() => import(/* webpackChunkName: "megamenu-detail" */ "./Detail").then(mod => mod.MegaMenuItemDetail));
 export const MegaMenuItem = ({
     item,
     selected,

@@ -9,7 +9,7 @@ import { Loading } from "../Loading";
 const SHOW_DELAY = 250;
 export const Toast = () => {
     const { show, config = {} as ToastStateConfig } = useAppSelector(state => state.toast);
-    const { timeout = 2000 } = config;
+    const { timeout = 4000 } = config;
     const [ itv, setItv ] = useState<any>();
     const [ itvShow, setItvShow ] = useState<any>();
     const dispatch = useAppDispatch();

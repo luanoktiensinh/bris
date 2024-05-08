@@ -1,3 +1,4 @@
 export interface AddedProductProps {
-    uid: string
+    sku: string,
+    options?: string[]
 }

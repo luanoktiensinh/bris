@@ -9,15 +9,14 @@ $color-main: #00589f;
     }
 }
 .image {
-    display: block;
-    width: 100%;
-    height: auto;
+    position: relative;
+    padding-bottom: 100%;
 }
 .title {
     margin-top: 1.6rem;
     height: 4.4rem;
     color: #222;
-    font-size: $font-size--sml;
+    font-size: $font-size--base;
     font-weight: 400;
     overflow: hidden;
     display: -webkit-box;

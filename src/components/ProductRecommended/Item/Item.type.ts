@@ -2,6 +2,6 @@ import { IProductRecommended } from "../ProductRecommended.type";
 
 export interface IProductRecommendedItemsProps {
     data: IProductRecommended,
-    onSelect: (id: number) => void,
+    onSelect: (id: string) => void,
     inMiniCart?: boolean
 }

@@ -1,29 +1,27 @@
 import { useEffect, useState } from "react";
-import { IProductRecommended } from "../ProductRecommended/ProductRecommended.type";
-import { product } from "../ProductRecommended/ProductRecommended.mock";
+import {useLazyQuery} from "@apollo/client";
+import {GQL_RECOMMENDED_PRODUCTS_DETAIL} from "@/components/ProductDetail/ProductDetail.gql";
+import {ProductDetailResponse} from "@/components/ProductDetail/ProductDetail.type";
 
 interface IUseProductDetailProps {
-    id: number
+    sku: string
 }
 export const useProductDetail = ({
-    id
+    sku
 }: IUseProductDetailProps) => {
-    const [ data, setData ] = useState<IProductRecommended>();
-    const [ loading, setLoading ] = useState(true);
-    const getProduct = () => {
-        setTimeout(() => {
-            let productTarget;
-            if((productTarget = product.find(item => item.id === id))) {
-                setData(productTarget);
-            };
-            setLoading(false);
-        }, 1000);
-    };
+    const [ getProduct, { loading, data, error} ] = useLazyQuery<ProductDetailResponse>(GQL_RECOMMENDED_PRODUCTS_DETAIL);
     useEffect(() => {
-        getProduct();
-    });
+        if(sku) {
+            getProduct({
+                variables: {
+                    sku
+                }
+            });
+        }
+    }, [sku, getProduct]);
     return {
-        data,
+        data: data?.products.items?.[0],
+        error,
         loading,
         getProduct
     };

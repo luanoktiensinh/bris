@@ -11,6 +11,7 @@ body {
     overflow-x: hidden;
 }
 *, *:before, *:after {
+    font-family: inherit;
     box-sizing: border-box;
 }
 img {

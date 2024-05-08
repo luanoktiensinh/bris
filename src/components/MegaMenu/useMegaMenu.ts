@@ -3,6 +3,7 @@ import { GET_MEGAMENU_GQL } from "./MegaMenu.gql";
 import { IMegaMenuItem, IMegaMenuResponse } from "./MegaMenu.type";
 import { cloneDeep } from "lodash";
 import { MEGAMENU_BRANDS_ID } from "@/const/global";
+import {MegaMenu} from "@/mock/data";
 
 export const useMegaMenu = () => {
     const client = getClient();
@@ -26,10 +27,10 @@ export const useMegaMenu = () => {
         return items;
     };
     const getData = async () => {
-        const { data } = await client.query<IMegaMenuResponse>({
-            query: GET_MEGAMENU_GQL
-        });
-        const _data = cloneDeep(data);
+        // const { data } = await client.query<IMegaMenuResponse>({
+        //     query: GET_MEGAMENU_GQL
+        // });
+        const _data = cloneDeep(MegaMenu);
         _data.getDynamicMenu.menu_items = formatItems(_data.getDynamicMenu.menu_items);
         return _data.getDynamicMenu;
     };

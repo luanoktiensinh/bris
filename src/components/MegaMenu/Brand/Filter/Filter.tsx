@@ -15,7 +15,7 @@ export const BrandFilter = () => {
         setSearch(charSelected);
     }, [charSelected]);
     useEffect(() => {
-        getBrands({variables: { search }});
+        // getBrands({variables: { search }});
         return () => {
             aborterRef.abort();
             setAborterRef(new AbortController());

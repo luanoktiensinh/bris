@@ -11,10 +11,10 @@ export const ProductDetailImage = ({
 }: IProductDetailImagesProps) => {
     const options = useMemo<SwiperOptions>(() => ({
         modules: [ Navigation ],
-        loop: true,
+        loop: items?.length > 1,
         spaceBetween: 0,
-        navigation: true
-    }), []);
+        navigation: items?.length > 1
+    }), [items]);
     return (<Swiper {...options} className={styles.main}>
         {
             items.map((item, index) => (

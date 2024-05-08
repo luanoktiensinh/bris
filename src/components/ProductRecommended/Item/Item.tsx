@@ -10,54 +10,51 @@ export const ProductRecommendedItem = ({
     onSelect
 }: IProductRecommendedItemsProps) => {
     const limitColor = useMemo(() => inMiniCart ? 4 : 5, [inMiniCart]);
-    const openQuickView = (e: MouseEvent, id: number) => {
+    const openQuickView = (e: MouseEvent, sku: string) => {
         e.preventDefault();
         e.stopPropagation();
-        onSelect && onSelect(id);
+        onSelect && onSelect(sku);
     };
     const colors = useMemo(() => {
-        let attrColors;
-        if((attrColors = data.attributes?.find(attr => attr.name === 'color'))) {
-            return attrColors;
-        }
-        return null;
+        const optionColors = data.configurable_options?.filter(option => option.attribute_code === 'color');
+        const colors = optionColors?.map(optionColor => optionColor.values.map(value => value.swatch_data?.value)).flat();
+        return Array.from(new Set(colors));
     }, [data]);
-    
     return (
-        <Link href={data.url} className={`${styles.main} ${inMiniCart ? styles.in_minicart : ''}`}>
-            <Image
-                className={styles.image}
-                src={data.image}
-                alt={data.title}
-                width={384}
-                height={384}
-                sizes="384px"
-            />
-            <div className={styles.title} dangerouslySetInnerHTML={{__html: data.title}}/>
+        <Link href={`/${data.url_key}${data.url_suffix}`} className={`${styles.main} ${inMiniCart ? styles.in_minicart : ''}`}>
+            <div className={styles.image}>
+                <Image
+                    src={data.small_image.url ?? '/'}
+                    alt={data.name}
+                    sizes="384px"
+                    fill
+                />
+            </div>
+            <div className={styles.title} dangerouslySetInnerHTML={{__html: data.name}}/>
             {
-                colors?.items.length && (
+                !!colors.length && (
                     <div className={styles.variants}>
                         {
-                            colors.items.slice(0, limitColor).map(color => (
+                            colors.slice(0, limitColor).map(color => (
                                 <div
-                                    key={color.value}
+                                    key={color}
                                     className={styles.variants__item}
-                                    has-border={(color.value === 'white') ? 'true' : undefined}
-                                    style={{backgroundColor: color.value}}
+                                    has-border={(color === '#ffffff') ? 'true' : undefined}
+                                    style={{backgroundColor: color}}
                                 />
                             ))
                         }
                         {
-                            colors.items.length > limitColor && <div className={styles.variants__item} has-border="true">+{colors.items.length - limitColor}</div>
+                            colors.length > limitColor && <div className={styles.variants__item} has-border="true">+{colors.length - limitColor}</div>
                         }
                     </div>
                 )
             }
             <div className={styles.price}>
-                <ProductRecommendedPrice price={data.price}/>
+                <ProductRecommendedPrice small={inMiniCart} price_range={data.price_range}/>
             </div>
             <div className={ styles.quickview}>
-                <button onClick={(e) => openQuickView(e, data.id)}>Quick View</button>
+                <button onClick={(e) => openQuickView(e, data.sku)}>Quick View</button>
             </div>
         </Link>
     );

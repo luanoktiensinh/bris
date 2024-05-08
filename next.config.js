@@ -14,10 +14,6 @@ const localIdent = ({resourcePath}, localIdentName, localName) => {
     }
     return `${moduleName}--${localName}--${getHash(resourcePath, 4)}`;
 };
-const createNextIntlPlugin = require('next-intl/plugin');
-const withNextIntl = createNextIntlPlugin();
-/* @type {import('next').NextConfig} */
-
 const nextConfig = {
     sassOptions: {
         additionalData: `@import "common";`
@@ -78,4 +74,4 @@ const nextConfig = {
     }
 };
 
-module.exports = withBundleAnalyzer(withNextIntl(nextConfig));
+module.exports = withBundleAnalyzer(nextConfig);

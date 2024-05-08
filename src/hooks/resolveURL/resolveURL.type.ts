@@ -4,7 +4,7 @@ export interface IRoute {
     type: ("PRODUCT" | "CATEGORY" | "CMS_PAGE"),
     identifier: string,
     bottom_content: string,
-    content: string,
+    content?: string,
     content_heading: string,
     meta_description: string,
     meta_keywords: string,

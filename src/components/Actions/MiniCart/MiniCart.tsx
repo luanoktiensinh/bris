@@ -4,11 +4,12 @@ import styles from './MiniCart.module.scss';
 import { ShoppingCartIcon } from "@/icons/icon-shopping-cart";
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { MouseEvent, useCallback, useEffect, useRef } from 'react';
+import {lazy, MouseEvent, Suspense, useCallback, useEffect, useRef} from 'react';
 import { setShow } from '@/store/features/miniCart/MiniCartSlide';
 import { useScreen } from '@/hooks/useScreen';
 import { useCart } from '@/hooks/cart/useCart';
-const MiniCart = dynamic(() => import('@/components/MiniCart').then(mod => mod.MiniCart));
+import {Loading} from "@/components/Loading";
+const MiniCart = lazy(() => import(/* webpackChunkName: "mini-cart" */ '@/components/MiniCart').then(mod => ({default: mod.MiniCart})));
 export const HeaderActionMiniCart = () => {
     useScreen();
     const { show, data } = useAppSelector(state => state.miniCart);
@@ -20,9 +21,11 @@ export const HeaderActionMiniCart = () => {
             e.preventDefault();
             dispatch(setShow(!show));
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [ show, screenWidth ]);
     useEffect(() => {
         getCart();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     return <div className={styles.main}>
         <Link
@@ -40,7 +43,7 @@ export const HeaderActionMiniCart = () => {
             }
         </Link>
         {
-            show && <MiniCart />
+            show && <Suspense fallback={<Loading customClass={styles.loading} small/>}><MiniCart /></Suspense>
         }
     </div>;
 };

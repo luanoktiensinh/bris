@@ -1,7 +1,7 @@
 "use client";
 import styles from './Container.module.scss';
 import { ArrowRightIcon } from '@/icons/arrow-right';
-import { PlusIcon } from '@/icons/icon-plus';
+import { PlusIcon } from '@/icons/plus';
 import { useMegaMenuMobileContainer } from './useContainer';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';

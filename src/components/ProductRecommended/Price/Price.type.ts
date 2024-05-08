@@ -1,3 +1,4 @@
 export interface IProductRecommendedPriceProps {
-    price: number | number[]
+    price_range: PriceRange,
+    small?: boolean
 }

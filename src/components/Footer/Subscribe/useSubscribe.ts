@@ -1,7 +1,7 @@
-import { useMutation } from '@apollo/client';
+// import { useMutation } from '@apollo/client';
 import { FormEvent } from 'react';
 
-import { SUBSCRIBE_TO_NEWSLETTER } from "./Subscribe.gql";
+// import { SUBSCRIBE_TO_NEWSLETTER } from "./Subscribe.gql";
 import { useCallback, useState } from 'react';
 
 export const useSubscribe = () => {
@@ -15,15 +15,15 @@ export const useSubscribe = () => {
         setSubscribeSuccess(false);
     }
 
-    const [ subscribeNewsLetter ] = useMutation(SUBSCRIBE_TO_NEWSLETTER, {
-        fetchPolicy: 'no-cache',
-        onError: (e: any) => {
-            setSubscribeError(e?.graphQLErrors || []);
-        },
-        onCompleted: () => {
-            setSubscribeSuccess(true);
-        }
-    });
+    // const [ subscribeNewsLetter ] = useMutation(SUBSCRIBE_TO_NEWSLETTER, {
+    //     fetchPolicy: 'no-cache',
+    //     onError: (e: any) => {
+    //         setSubscribeError(e?.graphQLErrors || []);
+    //     },
+    //     onCompleted: () => {
+    //         setSubscribeSuccess(true);
+    //     }
+    // });
 
     const handleSubmit = useCallback(
 
@@ -35,9 +35,9 @@ export const useSubscribe = () => {
 
                 const formData = new FormData(event.currentTarget);
                                 
-                await subscribeNewsLetter({
-                    variables: Object.fromEntries(formData)
-                });
+                // await subscribeNewsLetter({
+                //     variables: Object.fromEntries(formData)
+                // });
 
             } catch (error) {
                 if (process.env.NODE_ENV !== 'production') {
@@ -47,7 +47,7 @@ export const useSubscribe = () => {
                 setLoading(false);
             }
         },
-        [subscribeNewsLetter]
+        []
     );
     return {
         handleSubmit,

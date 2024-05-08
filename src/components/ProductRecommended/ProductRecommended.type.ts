@@ -7,17 +7,37 @@ export interface IProductRecommendedAttr {
     label: string,
     items: IProductRecommendedAttrItem[]
 }
+export type ProductRecommendedConfOption = {
+    attribute_code: string,
+    values: {
+        swatch_data?: {
+            value: string
+        }
+    }[]
+}
 export interface IProductRecommended {
-    id: number,
-    url: string,
-    title: string,
+    uid: string,
+    url_key: string,
+    url_suffix: string,
+    name: string,
     image: string,
+    small_image: {
+        url: string
+    }
     price: number | number[],
+    price_range: PriceRange,
     attributes?: IProductRecommendedAttr[],
-    sku?: string,
-    selected_options?: string[]
+    sku: string,
+    stock_status: string,
+    configurable_options?: ProductRecommendedConfOption[],
+    __typename: "SimpleProduct" | "ConfigurableProduct"
 }
 export interface IProductRecommendedProps {
     title?: string,
     inMiniCart?: boolean
+}
+export interface IProductRecommendedResponse {
+    products: {
+        items: IProductRecommended[]
+    }
 }
