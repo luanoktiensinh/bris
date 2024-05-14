@@ -1,0 +1,118 @@
+.title {
+    margin-bottom: 2rem;
+    font-size: $font-size--xl;
+}
+.product-col-5 {
+    @include respond-to-min($desktopSize) {
+        .product-tile {
+            flex: 0 0 20%;
+            max-width: 20%;
+        }
+        .discount-price {
+            font-size: 1.8rem;
+        }
+        .label {
+            span {
+                font-size: 1.6rem;
+            }
+        }
+        .product-tile {
+            padding-right: .8rem;
+            padding-left: .8rem;
+        }
+        .product-name {
+            font-size: 1.2rem;
+            min-height: 5rem;
+            min-height: 5rem;
+        }
+        .original-price {
+            font-size: 1.6rem;
+        }
+    }
+
+}
+
+.product-tile {
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    width: 100%;
+    padding-right: .4rem;
+    padding-left: .4rem;
+    margin-bottom: 1rem;
+    img {
+        width: 100%;
+    }
+    a {
+        text-decoration: none;
+    }
+    &:hover {
+        .image-hover {
+            opacity: 1;
+        }
+    }
+}
+.product-inner {
+    text-align: center;
+    position: relative;
+}
+.label {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: $color-light;
+    span {
+        width: 100%;
+        text-transform: unset;
+        font-weight: 500;
+        line-height: 2.4rem;
+        padding: 0.5rem 0.5rem;
+        color: $color-gray;
+        font-size: 1.2rem;
+        &:nth-child(1) {
+            background-color: $color-yellow;
+        }
+    }
+}
+.image {
+    position: relative;
+    margin-bottom: 1rem;
+    img {
+        height: 196px;
+    }
+}
+.image-hover {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.product-name {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    font-size: 1.2rem;
+    font-weight: 500;
+    -webkit-line-clamp: 2;
+    margin-bottom: 1rem;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.original-price {
+    color: $color-gray;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+.discount-price {
+    color: $color-discount;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
