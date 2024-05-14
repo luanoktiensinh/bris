@@ -18,7 +18,7 @@ export const useIsVisible = ({ref, renderOnce}: Props) => {
 
                 // Stop observing if already rendered once
                 if(isIntersecting && renderOnce) {
-                    observer.unobserve(target);
+                    observer?.unobserve(target);
                 }
             });
             observer.observe(target);
