@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Image from 'next/image';
 import Link from "next/link";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -46,6 +46,6 @@ const HeroCarousel = () => {
             </Swiper>
         </div>
     );
-}
+};
 
 export default HeroCarousel;

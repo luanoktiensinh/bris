@@ -4,7 +4,7 @@ import { IStoreConfigData } from "./storeConfig.type";
 import {StoreConfig} from "@/mock/data";
 
 export const useStoreConfig = () => {
-    const client = getClient();
+    // const client = getClient();
     const get = async() => {
         const data = StoreConfig;
         const error = undefined;

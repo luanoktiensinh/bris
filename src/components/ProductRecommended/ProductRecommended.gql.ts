@@ -29,7 +29,7 @@ const FRAGMENT_RECOMMENDED_PRODUCT = gql`
 export const GQL_RECOMMENDED_PRODUCTS = gql`
     ${fragment_price_range}
     query getRecommendedProducts {
-        products(pageSize: 20, search: "At") {
+        products(pageSize: 10, search: "At") {
             items {
                 uid
                 name

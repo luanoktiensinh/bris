@@ -22,11 +22,11 @@ export const ProductRecommendedItem = ({
     }, [data]);
     return (
         <Link href={`/${data.url_key}${data.url_suffix}`} className={`${styles.main} ${inMiniCart ? styles.in_minicart : ''}`}>
-            <div className={styles.image}>
+            <div className={styles.image} style={{position: 'relative'}}>
                 <Image
                     src={data.small_image.url ?? '/'}
                     alt={data.name}
-                    sizes="384px"
+                    sizes="(min-width: 992px) 25vw, (min-width: 768px) 33.3vw, 50vw"
                     fill
                 />
             </div>

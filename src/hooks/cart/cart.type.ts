@@ -62,6 +62,11 @@ export type CartResponse = {
     cart: Cart,
     user_errors: UserError[]
 }
+export type CartTotalResponse = {
+    cart: {
+        total_quantity: number
+    }
+}
 export type AddCartProduct = {
     quantity: number,
     sku: string,

@@ -15,9 +15,9 @@ interface IPage {
 export async function generateMetadata(
     { params }: IPage
 ): Promise<Metadata> {
-    const client = getClient();
+    // const client = getClient();
     const { slug } = params;
-    const { data, error } = await resolveRoute(client, slug?.join('/') || '/');
+    const { data, error } = await resolveRoute();
     return error || !data.route ? {} : {
         title: data.route.meta_title || data.route.title,
         description: data.route.meta_description,

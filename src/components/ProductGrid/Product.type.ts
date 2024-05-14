@@ -15,7 +15,11 @@ export interface IProduct {
 
 export interface ProductsResponse {
     data: {
-        title: string;
+        title?: string;
         products: IProduct[];
     }
+}
+export interface IProductGridProps {
+    itemPerRow?: number;
+    productsResponse: ProductsResponse;
 }

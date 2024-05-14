@@ -3,7 +3,7 @@ import {fragment_price_range} from "@/graphql/Product.gql";
 
 export const GQL_RECOMMENDED_PRODUCTS_DETAIL = gql`
     ${fragment_price_range}
-    query getRecommendedProducts($sku: String) {
+    query getRecommendedProductDetail($sku: String) {
         products(pageSize: 1, filter: { sku: {eq: $sku } }) {
             items {
                 uid

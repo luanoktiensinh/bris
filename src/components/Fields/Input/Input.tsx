@@ -1,10 +1,10 @@
 import { IInputPros } from "./Input.type";
 import styles from './Input.module.scss';
-import { lazy, useCallback, useMemo } from "react";
+import { useCallback, useMemo } from "react";
 import { useHelpers } from "@/app/helpers";
 import { debounce } from "lodash";
-const MinusIcon = lazy(() => import(/* webpackChunkName: "minus-icon" */ '@/icons/minus').then(mod => ({default: mod.MinusIcon})));
-const PlusIcon = lazy(() => import(/* webpackChunkName: "plus-icon" */'@/icons/plus').then(mod => ({default: mod.PlusIcon})));
+import {MinusIcon} from "@/icons/minus";
+import {PlusIcon} from "@/icons/plus";
 export const Input = ({
     type, max, min, step, value, btnRight, 
     changeWhenBlur, 

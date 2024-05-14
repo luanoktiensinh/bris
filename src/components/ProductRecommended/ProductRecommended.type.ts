@@ -20,17 +20,15 @@ export interface IProductRecommended {
     url_key: string,
     url_suffix: string,
     name: string,
-    image: string,
     small_image: {
         url: string
     }
-    price: number | number[],
     price_range: PriceRange,
     attributes?: IProductRecommendedAttr[],
     sku: string,
     stock_status: string,
     configurable_options?: ProductRecommendedConfOption[],
-    __typename: "SimpleProduct" | "ConfigurableProduct"
+    __typename?: "SimpleProduct" | "ConfigurableProduct"
 }
 export interface IProductRecommendedProps {
     title?: string,

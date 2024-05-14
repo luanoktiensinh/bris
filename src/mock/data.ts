@@ -2,6 +2,7 @@ import {IStoreConfigData} from "@/hooks/storeConfig/storeConfig.type";
 import {IMegaMenuResponse} from "@/components/MegaMenu/MegaMenu.type";
 import {IFooterResponse} from "@/components/Footer/Footer.type";
 import {IResolveRouteResponse} from "@/hooks/resolveURL/resolveURL.type";
+import {IProductRecommendedResponse} from "@/components/ProductRecommended/ProductRecommended.type";
 
 export const StoreConfig: IStoreConfigData = {
     "storeConfig": {
@@ -1293,3 +1294,555 @@ export const Route: IResolveRouteResponse = {
         "__typename": "CmsPage"
     }
 };
+export const ProductRecommened: IProductRecommendedResponse = {
+    "products": {
+        "items": [
+            {
+                "uid": "MjEwNA==",
+                "name": "Hotel At Home Sanctuary Throw 130x170cm",
+                "small_image": {
+                    "url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/h/o/hotel_at_home_sanctuary_throw_130x170cm-prd.jpg?store=en_us&image-type=small_image"
+                },
+                "url_key": "hotel-at-home-sanctuary-throw-130x170cm",
+                "url_suffix": ".html",
+                "stock_status": "IN_STOCK",
+                "sku": "100000002",
+                "price_range": {
+                    "maximum_price": {
+                        "final_price": {
+                            "value": 251.99,
+                            "currency": "USD"
+                        },
+                        "regular_price": {
+                            "value": 279.99,
+                            "currency": "USD"
+                        }
+                    },
+                    "minimum_price": {
+                        "regular_price": {
+                            "value": 270,
+                            "currency": "USD"
+                        },
+                        "final_price": {
+                            "value": 243,
+                            "currency": "USD"
+                        }
+                    }
+                },
+                "configurable_options": [
+                    {
+                        "attribute_code": "color",
+                        "values": [
+                            {
+                                "swatch_data": {
+                                    "value": "#53a828"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "#fa05fa"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "#a52a2a"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "#00008b"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "uid": "MjA5Nw==",
+                "name": "Hotel At Home Teddy Faux Fur Cushion 45x45cm",
+                "small_image": {
+                    "url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/c/a/catalogcontentdetails-1300892-800-800-75-0_0.jpg?store=en_us&image-type=small_image"
+                },
+                "url_key": "hotel-at-home-teddy-faux-fur-cushion-45x45cm",
+                "url_suffix": ".html",
+                "stock_status": "IN_STOCK",
+                "sku": "1103733-01",
+                "price_range": {
+                    "maximum_price": {
+                        "final_price": {
+                            "value": 35.99,
+                            "currency": "USD"
+                        },
+                        "regular_price": {
+                            "value": 39.99,
+                            "currency": "USD"
+                        }
+                    },
+                    "minimum_price": {
+                        "regular_price": {
+                            "value": 39.99,
+                            "currency": "USD"
+                        },
+                        "final_price": {
+                            "value": 35.99,
+                            "currency": "USD"
+                        }
+                    }
+                }
+            },
+            {
+                "uid": "NzI0",
+                "name": "Atlas Fitness Tank",
+                "small_image": {
+                    "url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/m/t/mt11-blue_main_1.jpg?store=en_us&image-type=small_image"
+                },
+                "url_key": "atlas-fitness-tank",
+                "url_suffix": ".html",
+                "stock_status": "IN_STOCK",
+                "sku": "MT11",
+                "price_range": {
+                    "maximum_price": {
+                        "final_price": {
+                            "value": 18,
+                            "currency": "USD"
+                        },
+                        "regular_price": {
+                            "value": 18,
+                            "currency": "USD"
+                        }
+                    },
+                    "minimum_price": {
+                        "regular_price": {
+                            "value": 18,
+                            "currency": "USD"
+                        },
+                        "final_price": {
+                            "value": 18,
+                            "currency": "USD"
+                        }
+                    }
+                },
+                "configurable_options": [
+                    {
+                        "attribute_code": "color",
+                        "values": [
+                            {
+                                "swatch_data": {
+                                    "value": "#1857f7"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "attribute_code": "size",
+                        "values": [
+                            {
+                                "swatch_data": {
+                                    "value": "XS"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "S"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "M"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "L"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "XL"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "uid": "NTE2",
+                "name": "Atomic Endurance Running Tee (Crew-Neck)",
+                "small_image": {
+                    "url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/m/s/ms12-red_main_1.jpg?store=en_us&image-type=small_image"
+                },
+                "url_key": "atomic-endurance-running-tee-crew-neck",
+                "url_suffix": ".html",
+                "stock_status": "IN_STOCK",
+                "sku": "MS12",
+                "price_range": {
+                    "maximum_price": {
+                        "final_price": {
+                            "value": 29,
+                            "currency": "USD"
+                        },
+                        "regular_price": {
+                            "value": 29,
+                            "currency": "USD"
+                        }
+                    },
+                    "minimum_price": {
+                        "regular_price": {
+                            "value": 29,
+                            "currency": "USD"
+                        },
+                        "final_price": {
+                            "value": 29,
+                            "currency": "USD"
+                        }
+                    }
+                },
+                "configurable_options": [
+                    {
+                        "attribute_code": "color",
+                        "values": [
+                            {
+                                "swatch_data": {
+                                    "value": "#000000"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "#1857f7"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "#ff0000"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "attribute_code": "size",
+                        "values": [
+                            {
+                                "swatch_data": {
+                                    "value": "XS"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "S"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "M"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "L"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "XL"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "uid": "NTAw",
+                "name": "Atomic Endurance Running Tee (V-neck)",
+                "small_image": {
+                    "url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/m/s/ms11-green_main_1.jpg?store=en_us&image-type=small_image"
+                },
+                "url_key": "atomic-endurance-running-tee-v-neck",
+                "url_suffix": ".html",
+                "stock_status": "IN_STOCK",
+                "sku": "MS11",
+                "price_range": {
+                    "maximum_price": {
+                        "final_price": {
+                            "value": 28,
+                            "currency": "USD"
+                        },
+                        "regular_price": {
+                            "value": 28,
+                            "currency": "USD"
+                        }
+                    },
+                    "minimum_price": {
+                        "regular_price": {
+                            "value": 28,
+                            "currency": "USD"
+                        },
+                        "final_price": {
+                            "value": 28,
+                            "currency": "USD"
+                        }
+                    }
+                },
+                "configurable_options": [
+                    {
+                        "attribute_code": "color",
+                        "values": [
+                            {
+                                "swatch_data": {
+                                    "value": "#1857f7"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "#53a828"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "#ffd500"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "attribute_code": "size",
+                        "values": [
+                            {
+                                "swatch_data": {
+                                    "value": "XS"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "S"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "M"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "L"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "XL"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "uid": "MjEwNQ==",
+                "name": "Hote @ Home Isaballa Cushion 45x45cm",
+                "small_image": {
+                    "url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/h/o/hote_home_isaballa_cushion_45x45cm-1.jpg?store=en_us&image-type=small_image"
+                },
+                "url_key": "hote-at-home-isaballa-cushion-45x45cm",
+                "url_suffix": ".html",
+                "stock_status": "IN_STOCK",
+                "sku": "100000003",
+                "price_range": {
+                    "maximum_price": {
+                        "final_price": {
+                            "value": 19.99,
+                            "currency": "USD"
+                        },
+                        "regular_price": {
+                            "value": 39.99,
+                            "currency": "USD"
+                        }
+                    },
+                    "minimum_price": {
+                        "regular_price": {
+                            "value": 39.99,
+                            "currency": "USD"
+                        },
+                        "final_price": {
+                            "value": 19.99,
+                            "currency": "USD"
+                        }
+                    }
+                }
+            },
+            {
+                "uid": "MjA0Nw==",
+                "name": "Luma Mailed Gift Card",
+                "small_image": {
+                    "url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/g/i/gift-card-physical-custom.jpg?store=en_us&image-type=small_image"
+                },
+                "url_key": "luma-mailed-gift-card",
+                "url_suffix": ".html",
+                "stock_status": "IN_STOCK",
+                "sku": "243-MB04",
+                "price_range": {
+                    "maximum_price": {
+                        "final_price": {
+                            "value": 0,
+                            "currency": "USD"
+                        },
+                        "regular_price": {
+                            "value": 0,
+                            "currency": "USD"
+                        }
+                    },
+                    "minimum_price": {
+                        "regular_price": {
+                            "value": 0,
+                            "currency": "USD"
+                        },
+                        "final_price": {
+                            "value": 0,
+                            "currency": "USD"
+                        }
+                    }
+                }
+            },
+            {
+                "uid": "MTE1Mg==",
+                "name": "Cassia Funnel Sweatshirt",
+                "small_image": {
+                    "url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/w/h/wh08-white_main_1.jpg?store=en_us&image-type=small_image"
+                },
+                "url_key": "cassia-funnel-sweatshirt",
+                "url_suffix": ".html",
+                "stock_status": "IN_STOCK",
+                "sku": "WH08",
+                "price_range": {
+                    "maximum_price": {
+                        "final_price": {
+                            "value": 48,
+                            "currency": "USD"
+                        },
+                        "regular_price": {
+                            "value": 48,
+                            "currency": "USD"
+                        }
+                    },
+                    "minimum_price": {
+                        "regular_price": {
+                            "value": 48,
+                            "currency": "USD"
+                        },
+                        "final_price": {
+                            "value": 48,
+                            "currency": "USD"
+                        }
+                    }
+                },
+                "configurable_options": [
+                    {
+                        "attribute_code": "color",
+                        "values": [
+                            {
+                                "swatch_data": {
+                                    "value": "#eb6703"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "#ef3dff"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "#ffffff"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "attribute_code": "size",
+                        "values": [
+                            {
+                                "swatch_data": {
+                                    "value": "XS"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "S"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "M"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "L"
+                                }
+                            },
+                            {
+                                "swatch_data": {
+                                    "value": "XL"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "uid": "MjEzNg==",
+                "name": "Configuration Training sneaker ",
+                "small_image": {
+                    "url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/d/o/download_4_.jpg?store=en_us&image-type=small_image"
+                },
+                "url_key": "training-sneaker-3",
+                "url_suffix": ".html",
+                "stock_status": "IN_STOCK",
+                "sku": "TS3-001",
+                "price_range": {
+                    "maximum_price": {
+                        "final_price": {
+                            "value": 100,
+                            "currency": "USD"
+                        },
+                        "regular_price": {
+                            "value": 100,
+                            "currency": "USD"
+                        }
+                    },
+                    "minimum_price": {
+                        "regular_price": {
+                            "value": 100,
+                            "currency": "USD"
+                        },
+                        "final_price": {
+                            "value": 100,
+                            "currency": "USD"
+                        }
+                    }
+                },
+                "configurable_options": [
+                    {
+                        "attribute_code": "sneaker_type",
+                        "values": [
+                            {
+                                "swatch_data": undefined
+                            },
+                            {
+                                "swatch_data": undefined
+                            }
+                        ]
+                    },
+                    {
+                        "attribute_code": "skeaker_sizes",
+                        "values": [
+                            {
+                                "swatch_data": undefined
+                            },
+                            {
+                                "swatch_data": undefined
+                            }
+                        ]
+                    }
+                ]
+            },
+        ]
+    }
+}

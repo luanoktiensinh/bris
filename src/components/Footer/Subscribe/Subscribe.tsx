@@ -81,5 +81,5 @@ export const Subscribe = () => {
                 <Image src={paymentImg8} alt="Payment" priority={false} width={115} height={26} />
             </div>
         </div>
-    )
-}
+    );
+};

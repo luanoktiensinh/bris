@@ -97,6 +97,14 @@ export const GQL_GET_CART = gql`
     }
 `;
 
+export const GQL_GET_CART_TOTAL = gql`
+    query MiniCartTotalQuantityQuery($cartId: String!){
+        cart(cart_id:$cartId){
+            total_quantity
+        }
+    }
+`;
+
 export const GQL_ADD_CART = gql`
     mutation AddProductToCart($cartId: String!, $product: CartItemInput!) {
         addProductsToCart(cartId: $cartId, cartItems: [$product]) {

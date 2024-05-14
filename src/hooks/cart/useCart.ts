@@ -37,6 +37,7 @@ export const useCart = () => {
             cartIdStored = data?.cartId ?? '';
         }
         dispatch(setId(cartIdStored));
+        cartIdStored && setStorage(MINICART_ID_KEY_STORE, cartIdStored);
         return cartIdStored;
     };
     const getCart = async () => {
@@ -53,12 +54,10 @@ export const useCart = () => {
         });
         if(error || !data) {
             error && setError(error);
-            setStorage(MINICART_ID_KEY_STORE, '');
             dispatch(setId(''));
             await getCart();
             return;
         }
-        setStorage(MINICART_ID_KEY_STORE, data.cart.id);
         setLoading(false);
         dispatch(setData(data.cart));
     };

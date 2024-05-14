@@ -13,7 +13,7 @@ export const useSubscribe = () => {
     const clearMessage = () => {
         setSubscribeError([]);
         setSubscribeSuccess(false);
-    }
+    };
 
     // const [ subscribeNewsLetter ] = useMutation(SUBSCRIBE_TO_NEWSLETTER, {
     //     fetchPolicy: 'no-cache',
@@ -54,5 +54,5 @@ export const useSubscribe = () => {
         subscribeError,
         subscribeSuccess,
         loading
-    }
-}
+    };
+};

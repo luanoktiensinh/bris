@@ -6,7 +6,7 @@ import { MEGAMENU_BRANDS_ID } from "@/const/global";
 import {MegaMenu} from "@/mock/data";
 
 export const useMegaMenu = () => {
-    const client = getClient();
+    // const client = getClient();
     const formatItems = (items: IMegaMenuItem[], parentIndex: number = 0, parentPath: string = '', level = 0) => {
         let _parent_path = '';
         items.forEach((item, index) => {

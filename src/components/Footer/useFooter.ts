@@ -1,4 +1,4 @@
-import { getClient } from "@/lib/apolloClient"
+import { getClient } from "@/lib/apolloClient";
 import { GET_FOOTER_GQL } from "./Footer.gql";
 import { cloneDeep } from "lodash";
 import { IFooterResponse } from './Footer.type';
@@ -14,9 +14,9 @@ export function useFooter() {
         const data = Footer;
         const _data = cloneDeep(data);
         return _data;
-    }
+    };
 
     return {
         getData
-    }
+    };
 }

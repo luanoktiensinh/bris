@@ -42,15 +42,15 @@ export const useHeroCarousel = () => {
                 "description": "Come get some!"
             }
         ]
-    }
+    };
     // const client = getClient();
     const getData = () => {
         // const { data } = await client.query({
         //     query: {}
         // });
         return tempData;
-    }
+    };
     return {
         getData
-    }
-}
+    };
+};

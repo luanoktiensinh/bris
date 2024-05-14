@@ -1,3 +1,4 @@
+"use client";
 import { CloseIcon } from '@/icons/close';
 import styles from './MiniCart.module.scss';
 import { ProductRecommended } from '../ProductRecommended';
@@ -7,12 +8,16 @@ import { MiniCartProductItem } from './Item';
 import { Price } from '../Price';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
+import {useCart} from "@/hooks/cart/useCart";
+import {Loading} from "@/components/Loading";
 export const MiniCart = () => {
     const dispatch = useAppDispatch();
+    const { getCart, loading } = useCart();
     const { locale } = useAppSelector(state => state.global);
     const { show, data } = useAppSelector(state => state.miniCart);
     const mainRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
+        void getCart();
         const onClick = (e: MouseEvent) => {
             const target = e.target as Node;
             if(target && show) {
@@ -38,13 +43,15 @@ export const MiniCart = () => {
             </button>
         </div>
         {
-            data?.items.length ? (
-                <div className={styles.products}>
-                    {
-                        data.items.map(product => <MiniCartProductItem key={product.uid} data={product}/>)
-                    }
-                </div>
-            ) : <div className={styles.empty}>Your cart is empty</div>
+            loading ? <Loading small center /> :
+                (data?.items.length ? (
+                        <div className={styles.products}>
+                            {
+                                data.items.map(product => <MiniCartProductItem key={product.uid} data={product}/>)
+                            }
+                        </div>
+                    ) : <div className={styles.empty}>Your cart is empty</div>
+                )
         }
         <ProductRecommended inMiniCart title='You may also like'/>
         {

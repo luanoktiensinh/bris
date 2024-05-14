@@ -1,21 +1,20 @@
-import { useProductGrid } from "./useProductGrid";
 import styles from './ProductGrid.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { ProductsResponse, IProduct } from './Product.type';
+import { IProduct, IProductGridProps } from './Product.type';
 
-const ProductGrid = async () => {
-    const { getProductGridData } = useProductGrid();
-    const responseData: ProductsResponse = await getProductGridData();
-    const ITEM_PER_ROW = 5;
-    
+const ProductGrid = async ({ itemPerRow, productsResponse } : IProductGridProps) => {
+
     return (
-        <div className="container">
-            <h4 className={styles.title}>{responseData.data.title}</h4>
-            <div className={`${styles[`product-col-${ITEM_PER_ROW}`]} row`} >
+        <div>
+            {
+                productsResponse.data.title ?
+                    <h4 className={styles.title}>{productsResponse.data.title}</h4> : ""
+            }
+            <div className={`${itemPerRow ? styles[`product-col-${itemPerRow}`] : ""} row`} >
                 {
-                    responseData.data.products.map((item: IProduct) => (
+                    productsResponse.data.products.map((item: IProduct) => (
                         <div className={styles["product-tile"]} key={item.id}>
                             <Link className={styles["product-inner"]} href={item.url}>
                                 <div className={styles.label}>
