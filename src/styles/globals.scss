@@ -139,3 +139,11 @@ ul, li {
 .d-none {
     display: none;
 }
+@include respond-to-max($tabletSize) {
+    .d-m-block {
+        display: block;
+    }
+    .d-m-none {
+        display: none;
+    }
+}
