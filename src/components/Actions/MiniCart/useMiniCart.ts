@@ -22,6 +22,7 @@ export const useMiniCart = () => {
         });
         setData(data?.cart.total_quantity ?? 0);
         setLoading(false);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     useEffect(() => {
         void getCartTotal();

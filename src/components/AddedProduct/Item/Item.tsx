@@ -8,6 +8,7 @@ export const AddedProductItem = ({
     data
 }: AddedProductItemProps) => {
     const { getCurrentProduct } = useCart();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const currentProduct = useMemo(() => getCurrentProduct(data), [data]);
     const url = useMemo(() => `/${currentProduct.product.url_key}${currentProduct.product.url_suffix}`, [currentProduct]);
     return <div className={styles.main}>

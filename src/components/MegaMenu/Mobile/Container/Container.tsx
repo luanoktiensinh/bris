@@ -9,7 +9,7 @@ import { MegaMenuBrand } from '../../Brand';
 import { MEGAMENU_BRANDS_ID } from '@/const/global';
 export const MegaMenuMobileContainer = () => {
     const { items, data, itemSelected, selectItem, back } = useMegaMenuMobileContainer();
-    
+
     const mainRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
         mainRef.current && (mainRef.current.scrollTop = 0);
@@ -25,8 +25,8 @@ export const MegaMenuMobileContainer = () => {
                         >
                             &lt; Back
                         </button>
-                        {itemSelected.id !== MEGAMENU_BRANDS_ID &&  <div className={styles.head}>
-                            { itemSelected.name }
+                        {itemSelected.id !== MEGAMENU_BRANDS_ID && <div className={styles.head}>
+                            {itemSelected.name}
                             <Link className={styles.head__shopall} href={itemSelected.link}>
                                 Shop All
                             </Link>
@@ -37,7 +37,7 @@ export const MegaMenuMobileContainer = () => {
             {
                 itemSelected?.id === MEGAMENU_BRANDS_ID ? (
                     <MegaMenuBrand />
-                ): items.map(item => (
+                ) : items.map(item => (
                     <Link
                         key={item.id}
                         href={item.link ?? '#'}
@@ -45,14 +45,14 @@ export const MegaMenuMobileContainer = () => {
                         onClick={(e) => selectItem(e, item)}
                     >
                         {item.name}
-                        { (item.children?.length) || item.id === MEGAMENU_BRANDS_ID ? (item.level <= 1 ? <ArrowRightIcon /> : <PlusIcon />) : ''}
+                        {(item.children?.length) || item.id === MEGAMENU_BRANDS_ID ? (item.level <= 1 ? <ArrowRightIcon /> : <PlusIcon />) : ''}
                     </Link>
                 ))
             }
             {
                 itemSelected ? (
                     itemSelected?.right_content && (
-                        <div dangerouslySetInnerHTML={{__html: itemSelected.right_content}} />
+                        <div dangerouslySetInnerHTML={{ __html: itemSelected.right_content }} />
                     )
                 ) : (
                     <div className={styles.footer}>
@@ -60,7 +60,7 @@ export const MegaMenuMobileContainer = () => {
                             data?.footer_icons.map(footerIcon => (
                                 <Link
                                     key={footerIcon.name}
-                                    href={footerIcon.link  ?? '#'}
+                                    href={footerIcon.link ?? '#'}
                                     className={styles.footer__link}
                                 >
                                     {footerIcon.name}

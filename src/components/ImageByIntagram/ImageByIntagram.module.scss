@@ -1,0 +1,81 @@
+.shop-instagram {
+    margin: 48px 0;
+    .shop-instagram__title {
+        font-size: 2.4rem;
+        color: #000;
+        line-height: 2.6rem;
+        margin-bottom: 5rem;
+        font-weight: 700;
+    }
+    .instagram-images {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .instagram-image__item {
+        position: relative;
+        width: 100%;      
+        padding-top: 100%;
+        margin-left: 1px;
+        overflow: hidden;
+        cursor: pointer;
+        margin-bottom: 1px;
+        @include respond-to-min($phoneLandscape) {
+            width: calc(100%/2 - 1px);
+            padding-top: calc(100%/2 - 1px);
+            &:nth-child(3) {
+                margin-left: 0;
+            }
+        }
+        @include respond-to-min($defaultDesktopSize) {
+            width: calc(100%/4 - 3px/4);
+            padding-top: calc(100%/4 - 3px/4);
+            margin-bottom: 0;
+        }
+        img {
+            object-fit: cover;
+            object-position: center center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+        }
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &::after {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            content: ' ';
+            z-index: 1;
+            opacity: 0;
+            background: rgba(0, 0, 0, 0.37);
+            transition: opacity .25s;
+        }
+
+        .instagram-icon {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            color: #fff;
+            left: 50%;
+            top: 50%;
+            margin-left: -12px;
+            margin-top: -12px;
+            opacity: 0;
+            z-index: 2;
+            transition: opacity .25s;
+        }
+
+        &:hover {
+            &::after, .instagram-icon {
+                opacity: 1;
+            }
+        }
+    }
+}
