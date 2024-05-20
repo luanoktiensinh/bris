@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ILogoContainer } from "./Logo.type";
 import styles from './Logo.module.scss';
 import { useRef } from "react";
-import { setCurrencyCode, setLocale } from "@/store/features/global/GlobalSlide";
+import {setCurrencyCode, setGridPerPage, setLocale} from "@/store/features/global/GlobalSlide";
 import { useAppDispatch } from "@/store/hooks";
 
 export const LogoContainer = ({
@@ -18,6 +18,7 @@ export const LogoContainer = ({
     if(!init.current) {
         dispatch(setLocale(data.storeConfig?.locale));
         dispatch(setCurrencyCode(data.currency?.base_currency_code));
+        dispatch(setGridPerPage(data.storeConfig.grid_per_page));
         init.current = true;
     }
     return (

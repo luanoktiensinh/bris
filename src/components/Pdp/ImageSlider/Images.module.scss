@@ -1,0 +1,111 @@
+.main {
+    :global {
+        .swiper-button-prev, .swiper-button-next {
+            --swiper-navigation-size: $font-size--base;
+            top: 50%;
+            margin-top: -2.4rem;
+            width: 4.8rem;
+            height: 4.8rem;
+            background-color: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $color-white
+        }
+        .swiper-button-prev {
+            left: 0;
+        }
+        .swiper-button-next {
+            right: 0;
+        }
+    }
+}
+.img-wrap {
+    --gap: 1.6rem;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-right: calc(var(--gap)* -1);
+    margin-left: calc(var(--gap)* -1);
+}
+
+.img-thumbs {
+    height: 100%;
+    overflow-y: hidden;
+    
+    :global {
+        .swiper {
+            height: 100%;
+        }
+        .swiper-slide {
+            border: 3px solid $color-white;
+            cursor: pointer;
+            height: auto;
+            display: flex;
+        }
+        .swiper-slide-thumb-active {
+            border-color: $color-gray;
+        }
+    }
+}
+
+.img-main {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    cursor: pointer;
+    img {
+        object-fit: fill;
+    }
+    :global {
+        .swiper-slide {
+            display: flex;
+        }
+    }
+}
+
+@include respond-to-max($desktopSize) {
+    .img-main {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .img-thumbs {
+        img {
+            width: 5rem;
+            height: 5rem;
+        }
+        :global {
+            .swiper-slide {
+                border: 3px solid $color-white;
+                cursor: pointer;
+                width: auto;
+                display: flex;
+    
+            }
+            .swiper-slide-thumb-active {
+                border-color: $color-gray;
+            }
+        }
+    }
+}
+
+@include respond-to-min($desktopSize) {
+    .img-main {
+        padding-right: var(--gap);
+        padding-left: var(--gap);
+    }
+    .img-wrap {
+        flex-wrap: nowrap;
+        --gap: 1.6rem;
+        margin-right: calc(var(--gap)* -1);
+        margin-left: calc(var(--gap)* -1);
+        flex-direction: row;
+    }
+    .img-thumbs {
+        img {
+            width: 10rem
+        }
+    }
+}

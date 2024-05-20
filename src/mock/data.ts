@@ -1,14 +1,17 @@
 import {IStoreConfigData} from "@/hooks/storeConfig/storeConfig.type";
 import {IMegaMenuResponse} from "@/components/MegaMenu/MegaMenu.type";
 import {IFooterResponse} from "@/components/Footer/Footer.type";
-import {IResolveRouteResponse} from "@/hooks/resolveURL/resolveURL.type";
+import {ICMSPage, IResolveRouteResponse} from "@/hooks/resolveURL/resolveURL.type";
 import {IProductRecommendedResponse} from "@/components/ProductRecommended/ProductRecommended.type";
+import {CategoryResponse} from "@/components/pages/Category/Category.type";
 
 export const StoreConfig: IStoreConfigData = {
     "storeConfig": {
         "store_code": "en_us",
         "locale": "en_US",
-        "header_logo_src": "stores/1/niteco_logo.png"
+        "header_logo_src": "stores/1/niteco_logo.png",
+		"grid_per_page": 24,
+		"category_url_suffix": ".html"
     },
     "currency": {
         "base_currency_code": "USD"
@@ -1292,7 +1295,7 @@ export const Route: IResolveRouteResponse = {
         "title": "Briscoes Home Page ",
         "url_key": "briscoes",
         "__typename": "CmsPage"
-    }
+    } as ICMSPage
 };
 export const ProductRecommened: IProductRecommendedResponse = {
     "products": {
@@ -1334,21 +1337,25 @@ export const ProductRecommened: IProductRecommendedResponse = {
                         "attribute_code": "color",
                         "values": [
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "#53a828"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "#fa05fa"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "#a52a2a"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "#00008b"
                                 }
@@ -1427,6 +1434,7 @@ export const ProductRecommened: IProductRecommendedResponse = {
                         "attribute_code": "color",
                         "values": [
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "#1857f7"
                                 }
@@ -1437,26 +1445,31 @@ export const ProductRecommened: IProductRecommendedResponse = {
                         "attribute_code": "size",
                         "values": [
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "XS"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "S"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "M"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "L"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "XL"
                                 }
@@ -1502,16 +1515,19 @@ export const ProductRecommened: IProductRecommendedResponse = {
                         "attribute_code": "color",
                         "values": [
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "#000000"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "#1857f7"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "#ff0000"
                                 }
@@ -1522,26 +1538,31 @@ export const ProductRecommened: IProductRecommendedResponse = {
                         "attribute_code": "size",
                         "values": [
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "XS"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "S"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "M"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "L"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "XL"
                                 }
@@ -1587,16 +1608,19 @@ export const ProductRecommened: IProductRecommendedResponse = {
                         "attribute_code": "color",
                         "values": [
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "#1857f7"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "#53a828"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "#ffd500"
                                 }
@@ -1607,26 +1631,31 @@ export const ProductRecommened: IProductRecommendedResponse = {
                         "attribute_code": "size",
                         "values": [
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "XS"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "S"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "M"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "L"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "XL"
                                 }
@@ -1738,16 +1767,19 @@ export const ProductRecommened: IProductRecommendedResponse = {
                         "attribute_code": "color",
                         "values": [
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "#eb6703"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "#ef3dff"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "#ffffff"
                                 }
@@ -1758,26 +1790,31 @@ export const ProductRecommened: IProductRecommendedResponse = {
                         "attribute_code": "size",
                         "values": [
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "XS"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "S"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "M"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "L"
                                 }
                             },
                             {
+								"label": "#53a828",
                                 "swatch_data": {
                                     "value": "XL"
                                 }
@@ -1817,32 +1854,2005 @@ export const ProductRecommened: IProductRecommendedResponse = {
                             "currency": "USD"
                         }
                     }
-                },
-                "configurable_options": [
-                    {
-                        "attribute_code": "sneaker_type",
-                        "values": [
-                            {
-                                "swatch_data": undefined
-                            },
-                            {
-                                "swatch_data": undefined
-                            }
-                        ]
-                    },
-                    {
-                        "attribute_code": "skeaker_sizes",
-                        "values": [
-                            {
-                                "swatch_data": undefined
-                            },
-                            {
-                                "swatch_data": undefined
-                            }
-                        ]
-                    }
-                ]
+                }
             },
         ]
     }
+};
+
+export const Category: CategoryResponse = {
+	"products": {
+		"sort_fields": {
+			"default": "product_published_on",
+			"options": [
+				{
+					"label": "Position",
+					"value": "position"
+				},
+				{
+					"label": "Product Name",
+					"value": "name"
+				},
+				{
+					"label": "Price",
+					"value": "price"
+				},
+				{
+					"label": "SAP Category",
+					"value": "SAP_Category"
+				},
+				{
+					"label": "Published On",
+					"value": "product_published_on"
+				},
+				{
+					"label": "Badge",
+					"value": "badge"
+				}
+			]
+		},
+		"aggregations": [
+			{
+				"label": "Price",
+				"count": 8,
+				"attribute_code": "price",
+				"options": [
+					{
+						"label": "0-15",
+						"value": "0_15",
+						"count": 19
+					},
+					{
+						"label": "15-20",
+						"value": "15_20",
+						"count": 11
+					},
+					{
+						"label": "20-25",
+						"value": "20_25",
+						"count": 13
+					},
+					{
+						"label": "25-30",
+						"value": "25_30",
+						"count": 14
+					},
+					{
+						"label": "30-40",
+						"value": "30_40",
+						"count": 20
+					},
+					{
+						"label": "40-60",
+						"value": "40_60",
+						"count": 16
+					},
+					{
+						"label": "60-100",
+						"value": "60_100",
+						"count": 17
+					},
+					{
+						"label": "100-490",
+						"value": "100_490",
+						"count": 18
+					}
+				],
+				"position": 0
+			},
+			{
+				"label": "Category",
+				"count": 127,
+				"attribute_code": "category_uid",
+				"options": [
+					{
+						"label": "Home Decor",
+						"value": "MTE0",
+						"count": 128
+					},
+					{
+						"label": "Briscoes",
+						"value": "NzY=",
+						"count": 117
+					},
+					{
+						"label": "[175] Home Decor",
+						"value": "NDY=",
+						"count": 58
+					},
+					{
+						"label": "[113] Giftware",
+						"value": "MTY5",
+						"count": 40
+					},
+					{
+						"label": "Hotel stuffs",
+						"value": "Nzc=",
+						"count": 35
+					},
+					{
+						"label": "Soft Furnishings",
+						"value": "NDc=",
+						"count": 29
+					},
+					{
+						"label": "New In",
+						"value": "MTY3",
+						"count": 26
+					},
+					{
+						"label": "Bed",
+						"value": "MTE2OTk=",
+						"count": 23
+					},
+					{
+						"label": "Cushions",
+						"value": "MTEw",
+						"count": 22
+					},
+					{
+						"label": "Christmas",
+						"value": "NjI=",
+						"count": 18
+					},
+					{
+						"label": "Ornamental",
+						"value": "MTM1",
+						"count": 17
+					},
+					{
+						"label": "[11320] Ornamental",
+						"value": "MTcw",
+						"count": 17
+					},
+					{
+						"label": "[17510] Clocks",
+						"value": "Nzg=",
+						"count": 16
+					},
+					{
+						"label": "Clocks & Watches",
+						"value": "MTI2",
+						"count": 16
+					},
+					{
+						"label": "[11305] Aroma",
+						"value": "MTYzMQ==",
+						"count": 16
+					},
+					{
+						"label": "Candles",
+						"value": "MTI1",
+						"count": 15
+					},
+					{
+						"label": "Wall",
+						"value": "MTUz",
+						"count": 15
+					},
+					{
+						"label": "[1751020] NXT",
+						"value": "MzQ4Mw==",
+						"count": 14
+					},
+					{
+						"label": "[175102005] NXT Wall clocks",
+						"value": "OTcxMw==",
+						"count": 13
+					},
+					{
+						"label": "Planters",
+						"value": "MTUw",
+						"count": 12
+					},
+					{
+						"label": "Sale",
+						"value": "MTE3MTA=",
+						"count": 12
+					},
+					{
+						"label": "Clearance",
+						"value": "MTY4",
+						"count": 10
+					},
+					{
+						"label": "Living & Giving",
+						"value": "MTE3MTM=",
+						"count": 10
+					},
+					{
+						"label": "Rugs & Mats",
+						"value": "MTM5",
+						"count": 9
+					},
+					{
+						"label": "All Aroma and Candles",
+						"value": "MTQ0",
+						"count": 9
+					},
+					{
+						"label": "Candle Holders",
+						"value": "MTQ1",
+						"count": 9
+					},
+					{
+						"label": "[1132005] No Brand",
+						"value": "MTg1Mg==",
+						"count": 8
+					},
+					{
+						"label": "Curtains & Blinds",
+						"value": "MTE3",
+						"count": 7
+					},
+					{
+						"label": "Fragrance",
+						"value": "MTI4",
+						"count": 7
+					},
+					{
+						"label": "[1130560] Twill & Co",
+						"value": "MTA0OA==",
+						"count": 6
+					},
+					{
+						"label": "[12327] Door Mats",
+						"value": "MTY2OA==",
+						"count": 6
+					},
+					{
+						"label": "[17520] Mirrors",
+						"value": "ODM=",
+						"count": 5
+					},
+					{
+						"label": "Mirrors",
+						"value": "MTMy",
+						"count": 5
+					},
+					{
+						"label": "Ornaments",
+						"value": "MTQ5",
+						"count": 5
+					},
+					{
+						"label": "Thermal Curtains",
+						"value": "MTY2",
+						"count": 5
+					},
+					{
+						"label": "[1132020] UrbanLoft",
+						"value": "MTcx",
+						"count": 5
+					},
+					{
+						"label": "Standard",
+						"value": "MTA0Ng==",
+						"count": 5
+					},
+					{
+						"label": "[12320] Curtains",
+						"value": "MTY2NA==",
+						"count": 5
+					},
+					{
+						"label": "[1232715] KleenTRED",
+						"value": "MjIwMQ==",
+						"count": 5
+					},
+					{
+						"label": "[113202005] URL Ornamental vases",
+						"value": "NDMxOA==",
+						"count": 5
+					},
+					{
+						"label": "Hotel Stuffs",
+						"value": "MTE3MTU=",
+						"count": 5
+					},
+					{
+						"label": "Candles",
+						"value": "MTQ2",
+						"count": 4
+					},
+					{
+						"label": "[11310] Candles",
+						"value": "MTA0Nw==",
+						"count": 4
+					},
+					{
+						"label": "[1131050] Kas",
+						"value": "MTY2Mg==",
+						"count": 4
+					},
+					{
+						"label": "[113105005] KAS Obsolete",
+						"value": "MTY2Mw==",
+						"count": 4
+					},
+					{
+						"label": "[1132015] Umbra",
+						"value": "MTg1NA==",
+						"count": 4
+					},
+					{
+						"label": "[113200550] XX Artificial Plants",
+						"value": "NDMwOA==",
+						"count": 4
+					},
+					{
+						"label": "[113201520] UA Wall Hooks",
+						"value": "NDMxNg==",
+						"count": 4
+					},
+					{
+						"label": "[12340] Throw Rugs",
+						"value": "OTQ=",
+						"count": 3
+					},
+					{
+						"label": "Throw Rugs",
+						"value": "MTIz",
+						"count": 3
+					},
+					{
+						"label": "Nursery",
+						"value": "MTM0",
+						"count": 3
+					},
+					{
+						"label": "Vases",
+						"value": "MTUx",
+						"count": 3
+					},
+					{
+						"label": "Pencil Pleat Curtains",
+						"value": "MTYy",
+						"count": 3
+					},
+					{
+						"label": "Sheer Curtains",
+						"value": "MTY0",
+						"count": 3
+					},
+					{
+						"label": "[12325] Rugs",
+						"value": "MTY2Nw==",
+						"count": 3
+					},
+					{
+						"label": "[11360] Nursery",
+						"value": "MTcwMg==",
+						"count": 3
+					},
+					{
+						"label": "[1136005] hi-hop",
+						"value": "MTg3MQ==",
+						"count": 3
+					},
+					{
+						"label": "[1232022] Studio One",
+						"value": "MjE3OQ==",
+						"count": 3
+					},
+					{
+						"label": "[113200535] XX Ornamental vases",
+						"value": "NDMwNQ==",
+						"count": 3
+					},
+					{
+						"label": "[123202225] STD Pencil Plt Crtn",
+						"value": "NTQzOA==",
+						"count": 3
+					},
+					{
+						"label": "[123271510] KLT Indoor Doormats",
+						"value": "NTUxMw==",
+						"count": 3
+					},
+					{
+						"label": "[17515] Frames",
+						"value": "ODI=",
+						"count": 2
+					},
+					{
+						"label": "Custom Curtains & Roman Blinds",
+						"value": "MTIx",
+						"count": 2
+					},
+					{
+						"label": "Frames",
+						"value": "MTI5",
+						"count": 2
+					},
+					{
+						"label": "Essential Oils",
+						"value": "MTU1",
+						"count": 2
+					},
+					{
+						"label": "Gift Sets & Kids Gifts",
+						"value": "MTU2",
+						"count": 2
+					},
+					{
+						"label": "Multi",
+						"value": "MTA0Mw==",
+						"count": 2
+					},
+					{
+						"label": "Ornate",
+						"value": "MTA0NQ==",
+						"count": 2
+					},
+					{
+						"label": "[1232520] UrbanLoft",
+						"value": "MTY3NA==",
+						"count": 2
+					},
+					{
+						"label": "[123252005] URL Indoor Rugs",
+						"value": "MTY3NQ==",
+						"count": 2
+					},
+					{
+						"label": "[1130505] No Brand",
+						"value": "MTgxMg==",
+						"count": 2
+					},
+					{
+						"label": "[1130540] Nature's Collective",
+						"value": "MTgxOQ==",
+						"count": 2
+					},
+					{
+						"label": "[1130597] Ecoya",
+						"value": "MTgzMQ==",
+						"count": 2
+					},
+					{
+						"label": "[1751005] No Brand",
+						"value": "MzQ4MA==",
+						"count": 2
+					},
+					{
+						"label": "[1751535] Umbra",
+						"value": "MzQ5Mg==",
+						"count": 2
+					},
+					{
+						"label": "[113050510] XX Aroma gift sets",
+						"value": "NDE3Mw==",
+						"count": 2
+					},
+					{
+						"label": "[113054005] NCO Fragrant oils",
+						"value": "NDIyNw==",
+						"count": 2
+					},
+					{
+						"label": "[123271520] KLT Outdoor Doormats",
+						"value": "NTUxNA==",
+						"count": 2
+					},
+					{
+						"label": "[175100515] XX Wall clocks",
+						"value": "OTcwNw==",
+						"count": 2
+					},
+					{
+						"label": "[175153505] UA Multi frames",
+						"value": "OTc0MA==",
+						"count": 2
+					},
+					{
+						"label": "Hot Deals",
+						"value": "MTE3MTE=",
+						"count": 2
+					},
+					{
+						"label": "[17525] Wall Art",
+						"value": "NzE=",
+						"count": 1
+					},
+					{
+						"label": "[1752515] Twill & Co",
+						"value": "NzI=",
+						"count": 1
+					},
+					{
+						"label": "[175251505] TNC Kids prints",
+						"value": "NzM=",
+						"count": 1
+					},
+					{
+						"label": "[1234014] Royal Doulton",
+						"value": "MTAy",
+						"count": 1
+					},
+					{
+						"label": "[123401405] RD Throw Rug",
+						"value": "MTAz",
+						"count": 1
+					},
+					{
+						"label": "[1234010] Classic Living",
+						"value": "MTA2",
+						"count": 1
+					},
+					{
+						"label": "[123401005] CL Throw Rugs",
+						"value": "MTA3",
+						"count": 1
+					},
+					{
+						"label": "[1234004] Esprit",
+						"value": "MTA4",
+						"count": 1
+					},
+					{
+						"label": "[123400405] ESP Throw Rugs",
+						"value": "MTA5",
+						"count": 1
+					},
+					{
+						"label": "Blinds",
+						"value": "MTE5",
+						"count": 1
+					},
+					{
+						"label": "Curtains",
+						"value": "MTIw",
+						"count": 1
+					},
+					{
+						"label": "Wall Art",
+						"value": "MTQw",
+						"count": 1
+					},
+					{
+						"label": "Curtain Accessories",
+						"value": "MTQ3",
+						"count": 1
+					},
+					{
+						"label": "Artificial Plants",
+						"value": "MTQ4",
+						"count": 1
+					},
+					{
+						"label": "Desk",
+						"value": "MTUy",
+						"count": 1
+					},
+					{
+						"label": "Diffusers",
+						"value": "MTU0",
+						"count": 1
+					},
+					{
+						"label": "Hand Creams",
+						"value": "MTU3",
+						"count": 1
+					},
+					{
+						"label": "Room Spray",
+						"value": "MTU4",
+						"count": 1
+					},
+					{
+						"label": "Eyelet Curtains",
+						"value": "MTYx",
+						"count": 1
+					},
+					{
+						"label": "Tab Top Curtains",
+						"value": "MTY1",
+						"count": 1
+					},
+					{
+						"label": "[12345] Curtain & Blind Hardware",
+						"value": "MTY2NQ==",
+						"count": 1
+					},
+					{
+						"label": "[1232506] Classic Living",
+						"value": "MTY3Ng==",
+						"count": 1
+					},
+					{
+						"label": "[123250605] CL Indoor Rugs",
+						"value": "MTY3Nw==",
+						"count": 1
+					},
+					{
+						"label": "[12310] Blinds",
+						"value": "MTcxNg==",
+						"count": 1
+					},
+					{
+						"label": "[1130510] UrbanLoft",
+						"value": "MTgxMw==",
+						"count": 1
+					},
+					{
+						"label": "[1130525] The Aromatherapy Co",
+						"value": "MTgxNg==",
+						"count": 1
+					},
+					{
+						"label": "[1130590] Banks & Co",
+						"value": "MTgyOA==",
+						"count": 1
+					},
+					{
+						"label": "[1130596] Annabel Trends",
+						"value": "MTgzMA==",
+						"count": 1
+					},
+					{
+						"label": "[1231013] Habitat",
+						"value": "MjE1NQ==",
+						"count": 1
+					},
+					{
+						"label": "[1232005] No Brand",
+						"value": "MjE2OQ==",
+						"count": 1
+					},
+					{
+						"label": "[1232013] Habitat",
+						"value": "MjE3NA==",
+						"count": 1
+					},
+					{
+						"label": "[1232725] Miltex",
+						"value": "MjIwMw==",
+						"count": 1
+					},
+					{
+						"label": "[1234580] Umbra",
+						"value": "MjI4OQ==",
+						"count": 1
+					},
+					{
+						"label": "[113051005] URL Diffuser&incense",
+						"value": "NDE4NQ==",
+						"count": 1
+					},
+					{
+						"label": "[113052525] ARO Room sprays",
+						"value": "NDIxNw==",
+						"count": 1
+					},
+					{
+						"label": "[113059010] BKC Lotions",
+						"value": "NDI1NA==",
+						"count": 1
+					},
+					{
+						"label": "[113059610] ANT Beauty",
+						"value": "NDI1OQ==",
+						"count": 1
+					},
+					{
+						"label": "[113059705] ECA Diffusers",
+						"value": "NDI2MA==",
+						"count": 1
+					},
+					{
+						"label": "[113059730] ECA Jar Candles",
+						"value": "NDI2NQ==",
+						"count": 1
+					},
+					{
+						"label": "[113200515] XX Decor",
+						"value": "NDMwMQ==",
+						"count": 1
+					},
+					{
+						"label": "[123101310] HAB Roman Blinds",
+						"value": "NTM0Mw==",
+						"count": 1
+					},
+					{
+						"label": "[123200510] XX Eyelet Curtains",
+						"value": "NTM4Nw==",
+						"count": 1
+					},
+					{
+						"label": "[123201330] HAB Tab Top",
+						"value": "NTQxNw==",
+						"count": 1
+					},
+					{
+						"label": "[123272520] MLX Outdoor Doormats",
+						"value": "NTUxOA==",
+						"count": 1
+					},
+					{
+						"label": "[123458020] UA Curtain Rod&Pole",
+						"value": "NTczMA==",
+						"count": 1
+					},
+					{
+						"label": "[175102010] NXT Desk clocks",
+						"value": "OTcxNA==",
+						"count": 1
+					}
+				],
+				"position": 1
+			},
+			{
+				"label": "Color",
+				"count": 34,
+				"attribute_code": "color",
+				"options": [
+					{
+						"label": "Black",
+						"value": "58",
+						"count": 53
+					},
+					{
+						"label": "Haze Blue",
+						"value": "59",
+						"count": 1
+					},
+					{
+						"label": "Brown",
+						"value": "60",
+						"count": 3
+					},
+					{
+						"label": "Gray",
+						"value": "61",
+						"count": 8
+					},
+					{
+						"label": "Green",
+						"value": "62",
+						"count": 2
+					},
+					{
+						"label": "Orange",
+						"value": "65",
+						"count": 2
+					},
+					{
+						"label": "Red",
+						"value": "67",
+						"count": 1
+					},
+					{
+						"label": "White",
+						"value": "68",
+						"count": 32
+					},
+					{
+						"label": "Yellow",
+						"value": "69",
+						"count": 3
+					},
+					{
+						"label": "Pink",
+						"value": "249",
+						"count": 4
+					},
+					{
+						"label": "Coffee",
+						"value": "250",
+						"count": 3
+					},
+					{
+						"label": "Navy",
+						"value": "251",
+						"count": 5
+					},
+					{
+						"label": "Natural",
+						"value": "261",
+						"count": 2
+					},
+					{
+						"label": "Cream",
+						"value": "262",
+						"count": 1
+					},
+					{
+						"label": "Linen",
+						"value": "267",
+						"count": 1
+					},
+					{
+						"label": "Steel",
+						"value": "268",
+						"count": 1
+					},
+					{
+						"label": "Coal",
+						"value": "269",
+						"count": 2
+					},
+					{
+						"label": "Glacier",
+						"value": "270",
+						"count": 1
+					},
+					{
+						"label": "Wisteria",
+						"value": "271",
+						"count": 1
+					},
+					{
+						"label": "Sand",
+						"value": "272",
+						"count": 2
+					},
+					{
+						"label": "Dove",
+						"value": "273",
+						"count": 2
+					},
+					{
+						"label": "Olive",
+						"value": "274",
+						"count": 1
+					},
+					{
+						"label": "Toffee",
+						"value": "450",
+						"count": 1
+					},
+					{
+						"label": "Chilli",
+						"value": "454",
+						"count": 1
+					},
+					{
+						"label": "Sky",
+						"value": "455",
+						"count": 1
+					},
+					{
+						"label": "Almond",
+						"value": "457",
+						"count": 1
+					},
+					{
+						"label": "Mist",
+						"value": "458",
+						"count": 1
+					},
+					{
+						"label": "Tapestry",
+						"value": "459",
+						"count": 1
+					},
+					{
+						"label": "White blind",
+						"value": "475",
+						"count": 1
+					},
+					{
+						"label": "Multi-Curtains",
+						"value": "479",
+						"count": 1
+					},
+					{
+						"label": "Putty",
+						"value": "484",
+						"count": 1
+					},
+					{
+						"label": "Charcoal",
+						"value": "485",
+						"count": 1
+					},
+					{
+						"label": "Nickel/Steel",
+						"value": "488",
+						"count": 1
+					},
+					{
+						"label": "Silver",
+						"value": "496",
+						"count": 1
+					}
+				],
+				"position": 0
+			},
+			{
+				"label": "Material",
+				"count": 3,
+				"attribute_code": "material",
+				"options": [
+					{
+						"label": "Cotton",
+						"value": "42",
+						"count": 2
+					},
+					{
+						"label": "Spandex",
+						"value": "159",
+						"count": 1
+					},
+					{
+						"label": "Ripstop",
+						"value": "49",
+						"count": 1
+					}
+				],
+				"position": 0
+			},
+			{
+				"label": "Size",
+				"count": 19,
+				"attribute_code": "size",
+				"options": [
+					{
+						"label": "55 cm",
+						"value": "100",
+						"count": 2
+					},
+					{
+						"label": "28",
+						"value": "180",
+						"count": 1
+					},
+					{
+						"label": "30",
+						"value": "182",
+						"count": 4
+					},
+					{
+						"label": "80x150cm",
+						"value": "460",
+						"count": 1
+					},
+					{
+						"label": "90x210",
+						"value": "469",
+						"count": 1
+					},
+					{
+						"label": "120x210",
+						"value": "470",
+						"count": 1
+					},
+					{
+						"label": "150x210",
+						"value": "471",
+						"count": 1
+					},
+					{
+						"label": "180x210",
+						"value": "472",
+						"count": 1
+					},
+					{
+						"label": "210x137",
+						"value": "473",
+						"count": 1
+					},
+					{
+						"label": "210x210",
+						"value": "474",
+						"count": 1
+					},
+					{
+						"label": "170x160",
+						"value": "480",
+						"count": 2
+					},
+					{
+						"label": "170x205",
+						"value": "481",
+						"count": 2
+					},
+					{
+						"label": "230x205",
+						"value": "482",
+						"count": 2
+					},
+					{
+						"label": "230x220",
+						"value": "483",
+						"count": 2
+					},
+					{
+						"label": "91-183",
+						"value": "486",
+						"count": 1
+					},
+					{
+						"label": "180-366",
+						"value": "487",
+						"count": 1
+					},
+					{
+						"label": "120x220",
+						"value": "489",
+						"count": 1
+					},
+					{
+						"label": "300x120",
+						"value": "490",
+						"count": 1
+					},
+					{
+						"label": "300x137",
+						"value": "491",
+						"count": 1
+					}
+				],
+				"position": 0
+			},
+			{
+				"label": "Room",
+				"count": 8,
+				"attribute_code": "room",
+				"options": [
+					{
+						"label": "Living Room",
+						"value": "252",
+						"count": 42
+					},
+					{
+						"label": "Outdoors",
+						"value": "253",
+						"count": 4
+					},
+					{
+						"label": "Kids",
+						"value": "254",
+						"count": 26
+					},
+					{
+						"label": "Bedroom",
+						"value": "255",
+						"count": 25
+					},
+					{
+						"label": "Bathroom",
+						"value": "256",
+						"count": 5
+					},
+					{
+						"label": "Kitchen",
+						"value": "257",
+						"count": 19
+					},
+					{
+						"label": "Dining Room",
+						"value": "259",
+						"count": 19
+					},
+					{
+						"label": "Travel & Accessories",
+						"value": "260",
+						"count": 1
+					}
+				],
+				"position": 0
+			},
+			{
+				"label": "Brand",
+				"count": 28,
+				"attribute_code": "brand",
+				"options": [
+					{
+						"label": "Abode",
+						"value": "314",
+						"count": 2
+					},
+					{
+						"label": "Classic Living",
+						"value": "330",
+						"count": 3
+					},
+					{
+						"label": "Ecoya",
+						"value": "345",
+						"count": 2
+					},
+					{
+						"label": "Galaxy",
+						"value": "356",
+						"count": 4
+					},
+					{
+						"label": "Habitat",
+						"value": "361",
+						"count": 2
+					},
+					{
+						"label": "Hotel At Home",
+						"value": "365",
+						"count": 4
+					},
+					{
+						"label": "KAS",
+						"value": "377",
+						"count": 8
+					},
+					{
+						"label": "Royal Doulton",
+						"value": "411",
+						"count": 1
+					},
+					{
+						"label": "Studio One",
+						"value": "425",
+						"count": 2
+					},
+					{
+						"label": "The Aromatherapy Co",
+						"value": "429",
+						"count": 1
+					},
+					{
+						"label": "Twill & Co",
+						"value": "432",
+						"count": 10
+					},
+					{
+						"label": "Umbra",
+						"value": "433",
+						"count": 7
+					},
+					{
+						"label": "Urban",
+						"value": "434",
+						"count": 1
+					},
+					{
+						"label": "Urban Loft",
+						"value": "435",
+						"count": 7
+					},
+					{
+						"label": "Poppiseed",
+						"value": "445",
+						"count": 2
+					},
+					{
+						"label": "Esprit",
+						"value": "447",
+						"count": 2
+					},
+					{
+						"label": "Royal Albert",
+						"value": "448",
+						"count": 1
+					},
+					{
+						"label": "Hotel @ Home",
+						"value": "449",
+						"count": 2
+					},
+					{
+						"label": "Hallmark",
+						"value": "452",
+						"count": 8
+					},
+					{
+						"label": "Southern Lights",
+						"value": "453",
+						"count": 10
+					},
+					{
+						"label": "KleenTRED",
+						"value": "463",
+						"count": 4
+					},
+					{
+						"label": "NXT",
+						"value": "464",
+						"count": 14
+					},
+					{
+						"label": "Ricardo",
+						"value": "465",
+						"count": 1
+					},
+					{
+						"label": "Annabel Trends",
+						"value": "466",
+						"count": 1
+					},
+					{
+						"label": "Nature's Collective",
+						"value": "467",
+						"count": 2
+					},
+					{
+						"label": "Banks & Co",
+						"value": "493",
+						"count": 1
+					},
+					{
+						"label": "Brooklyn",
+						"value": "497",
+						"count": 2
+					},
+					{
+						"label": "Rembrandt",
+						"value": "498",
+						"count": 1
+					}
+				],
+				"position": 0
+			},
+			{
+				"label": "Badge",
+				"count": 2,
+				"attribute_code": "badge",
+				"options": [
+					{
+						"label": "Clearance",
+						"value": "504",
+						"count": 1
+					},
+					{
+						"label": "KnockDown",
+						"value": "505",
+						"count": 1
+					}
+				],
+				"position": 0
+			}
+		],
+		"items": [
+			{
+				"__typename": "SimpleProduct",
+				"uid": "MjIxMg==",
+				"name": "KleenTred Coir Tuft Printed Welcome Door Mat 75x45cm",
+				"price_range": {
+					"maximum_price": {
+						"final_price": {
+							"value": 49.99,
+							"currency": "USD"
+						},
+						"regular_price": {
+							"value": 49.99,
+							"currency": "USD"
+						}
+					},
+					"minimum_price": {
+						"regular_price": {
+							"value": 49.99,
+							"currency": "USD"
+						},
+						"final_price": {
+							"value": 49.99,
+							"currency": "USD"
+						}
+					}
+				},
+				"sku": "1101767",
+				"badges": [],
+				"thumbnail": {
+					"url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/cache/756d0e6f5d40daf5f22c4f72ada167ee/c/a/catalogcontentdetails-1205439-800-800-75-0_0.jpg"
+				},
+				"stock_status": "IN_STOCK",
+				"review_count": 0,
+				"rating_summary": 0,
+				"url_key": "kleentred-coir-tuft-printed-welcome-door-mat-75x45cm",
+				"url_suffix": ".html"
+			},
+			{
+				"__typename": "SimpleProduct",
+				"uid": "MjIxMQ==",
+				"name": "KleenTred Sylvania Grey Diamond Door Mat 120x67cm",
+				"price_range": {
+					"maximum_price": {
+						"final_price": {
+							"value": 44.99,
+							"currency": "USD"
+						},
+						"regular_price": {
+							"value": 44.99,
+							"currency": "USD"
+						}
+					},
+					"minimum_price": {
+						"regular_price": {
+							"value": 44.99,
+							"currency": "USD"
+						},
+						"final_price": {
+							"value": 44.99,
+							"currency": "USD"
+						}
+					}
+				},
+				"sku": "1098614",
+				"badges": [],
+				"thumbnail": {
+					"url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/cache/756d0e6f5d40daf5f22c4f72ada167ee/c/a/catalogcontentdetails-930457-800-800-75-0_0.jpg"
+				},
+				"stock_status": "IN_STOCK",
+				"review_count": 0,
+				"rating_summary": 0,
+				"url_key": "kleentred-sylvania-grey-diamond-door-mat-120x67cm",
+				"url_suffix": ".html"
+			},
+			{
+				"__typename": "SimpleProduct",
+				"uid": "MjIxMA==",
+				"name": "KleenTred Nevada Carpet Protect 300x68cm",
+				"price_range": {
+					"maximum_price": {
+						"final_price": {
+							"value": 64.99,
+							"currency": "USD"
+						},
+						"regular_price": {
+							"value": 64.99,
+							"currency": "USD"
+						}
+					},
+					"minimum_price": {
+						"regular_price": {
+							"value": 64.99,
+							"currency": "USD"
+						},
+						"final_price": {
+							"value": 64.99,
+							"currency": "USD"
+						}
+					}
+				},
+				"sku": "1098610",
+				"badges": [],
+				"thumbnail": {
+					"url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/cache/756d0e6f5d40daf5f22c4f72ada167ee/c/a/catalogcontentdetails-928546-800-800-75-0_0.jpg"
+				},
+				"stock_status": "IN_STOCK",
+				"review_count": 0,
+				"rating_summary": 0,
+				"url_key": "kleentred-nevada-carpet-protect-300x68cm",
+				"url_suffix": ".html"
+			},
+			{
+				"__typename": "SimpleProduct",
+				"uid": "MjIwOQ==",
+				"name": "KleenTred Tuscany Rubber Scroll Door Mat 75x45cm",
+				"price_range": {
+					"maximum_price": {
+						"final_price": {
+							"value": 49.99,
+							"currency": "USD"
+						},
+						"regular_price": {
+							"value": 49.99,
+							"currency": "USD"
+						}
+					},
+					"minimum_price": {
+						"regular_price": {
+							"value": 49.99,
+							"currency": "USD"
+						},
+						"final_price": {
+							"value": 49.99,
+							"currency": "USD"
+						}
+					}
+				},
+				"sku": "1101768",
+				"badges": [],
+				"thumbnail": {
+					"url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/cache/756d0e6f5d40daf5f22c4f72ada167ee/c/a/catalogcontentdetails-1205441-800-800-75-0_0.jpg"
+				},
+				"stock_status": "IN_STOCK",
+				"review_count": 0,
+				"rating_summary": 0,
+				"url_key": "kleentred-tuscany-rubber-scroll-door-mat-75x45cm",
+				"url_suffix": ".html"
+			},
+			{
+				"__typename": "SimpleProduct",
+				"uid": "MjIwOA==",
+				"name": "Miltex Utility Deck Mat",
+				"price_range": {
+					"maximum_price": {
+						"final_price": {
+							"value": 224.99,
+							"currency": "USD"
+						},
+						"regular_price": {
+							"value": 224.99,
+							"currency": "USD"
+						}
+					},
+					"minimum_price": {
+						"regular_price": {
+							"value": 224.99,
+							"currency": "USD"
+						},
+						"final_price": {
+							"value": 224.99,
+							"currency": "USD"
+						}
+					}
+				},
+				"sku": "1098721",
+				"badges": [],
+				"thumbnail": {
+					"url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/cache/756d0e6f5d40daf5f22c4f72ada167ee/c/a/catalogcontentdetails-966400-800-800-75-0_0.jpg"
+				},
+				"stock_status": "IN_STOCK",
+				"review_count": 0,
+				"rating_summary": 0,
+				"url_key": "miltex-utility-deck-mat",
+				"url_suffix": ".html"
+			},
+			{
+				"__typename": "SimpleProduct",
+				"uid": "MjIwNw==",
+				"name": "Classic Jack Leaf Rug",
+				"price_range": {
+					"maximum_price": {
+						"final_price": {
+							"value": 249.99,
+							"currency": "USD"
+						},
+						"regular_price": {
+							"value": 249.99,
+							"currency": "USD"
+						}
+					},
+					"minimum_price": {
+						"regular_price": {
+							"value": 249.99,
+							"currency": "USD"
+						},
+						"final_price": {
+							"value": 249.99,
+							"currency": "USD"
+						}
+					}
+				},
+				"sku": "1107297",
+				"badges": [],
+				"thumbnail": {
+					"url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/cache/756d0e6f5d40daf5f22c4f72ada167ee/c/a/catalogcontentdetails-1843948-800-800-75-0_0.jpg"
+				},
+				"stock_status": "IN_STOCK",
+				"review_count": 0,
+				"rating_summary": 0,
+				"url_key": "classic-jack-leaf-rug",
+				"url_suffix": ".html"
+			},
+			{
+				"__typename": "ConfigurableProduct",
+				"uid": "MjIwNA==",
+				"name": "Classic Living Style Cross Grain Rug",
+				"price_range": {
+					"maximum_price": {
+						"final_price": {
+							"value": 139.99,
+							"currency": "USD"
+						},
+						"regular_price": {
+							"value": 139.99,
+							"currency": "USD"
+						}
+					},
+					"minimum_price": {
+						"regular_price": {
+							"value": 139.99,
+							"currency": "USD"
+						},
+						"final_price": {
+							"value": 139.99,
+							"currency": "USD"
+						}
+					}
+				},
+				"sku": "1101293",
+				"badges": [],
+				"thumbnail": {
+					"url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/cache/756d0e6f5d40daf5f22c4f72ada167ee/c/a/catalogcontentdetails-960048-800-800-75-0_0.jpg"
+				},
+				"stock_status": "IN_STOCK",
+				"review_count": 0,
+				"rating_summary": 0,
+				"url_key": "classic-living-style-cross-grain-rug",
+				"url_suffix": ".html"
+			},
+			{
+				"__typename": "SimpleProduct",
+				"uid": "MjIwMw==",
+				"name": "Classic Jack Leaf Rug Round",
+				"price_range": {
+					"maximum_price": {
+						"final_price": {
+							"value": 249.99,
+							"currency": "USD"
+						},
+						"regular_price": {
+							"value": 249.99,
+							"currency": "USD"
+						}
+					},
+					"minimum_price": {
+						"regular_price": {
+							"value": 249.99,
+							"currency": "USD"
+						},
+						"final_price": {
+							"value": 249.99,
+							"currency": "USD"
+						}
+					}
+				},
+				"sku": "1107296",
+				"badges": [],
+				"thumbnail": {
+					"url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/cache/756d0e6f5d40daf5f22c4f72ada167ee/c/a/catalogcontentdetails-1598625-800-800-75-0_0.jpg"
+				},
+				"stock_status": "IN_STOCK",
+				"review_count": 0,
+				"rating_summary": 0,
+				"url_key": "classic-jack-leaf-rug-round",
+				"url_suffix": ".html"
+			},
+			{
+				"__typename": "SimpleProduct",
+				"uid": "MjE5OA==",
+				"name": "Twill & Co Sugar Lemon & Caramel Tin Candle 200g",
+				"price_range": {
+					"maximum_price": {
+						"final_price": {
+							"value": 13.5,
+							"currency": "USD"
+						},
+						"regular_price": {
+							"value": 15,
+							"currency": "USD"
+						}
+					},
+					"minimum_price": {
+						"regular_price": {
+							"value": 15,
+							"currency": "USD"
+						},
+						"final_price": {
+							"value": 13.5,
+							"currency": "USD"
+						}
+					}
+				},
+				"sku": "1099118",
+				"badges": [],
+				"thumbnail": {
+					"url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/cache/756d0e6f5d40daf5f22c4f72ada167ee/1/0/1099118.jpg"
+				},
+				"stock_status": "IN_STOCK",
+				"review_count": 0,
+				"rating_summary": 0,
+				"url_key": "twill-co-tin-candle-white-peach-sea-breeze-green-200gm-5",
+				"url_suffix": ".html"
+			},
+			{
+				"__typename": "SimpleProduct",
+				"uid": "MjE5Nw==",
+				"name": "Twill & Co Tin Candle Raspberry & Rhubarb Multi 350gm",
+				"price_range": {
+					"maximum_price": {
+						"final_price": {
+							"value": 21.59,
+							"currency": "USD"
+						},
+						"regular_price": {
+							"value": 23.99,
+							"currency": "USD"
+						}
+					},
+					"minimum_price": {
+						"regular_price": {
+							"value": 23.99,
+							"currency": "USD"
+						},
+						"final_price": {
+							"value": 21.59,
+							"currency": "USD"
+						}
+					}
+				},
+				"sku": "1108925",
+				"badges": [],
+				"thumbnail": {
+					"url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/cache/756d0e6f5d40daf5f22c4f72ada167ee/t/w/twill_co_tin_candle_lime_lychee_multi_200gm1_1.jpg"
+				},
+				"stock_status": "IN_STOCK",
+				"review_count": 0,
+				"rating_summary": 0,
+				"url_key": "twill-co-tin-candle-white-peach-sea-breeze-green-200gm-4",
+				"url_suffix": ".html"
+			},
+			{
+				"__typename": "SimpleProduct",
+				"uid": "MjE5Ng==",
+				"name": "Twill & Co Tin Candle Lime & Lychee Multi 200gm",
+				"price_range": {
+					"maximum_price": {
+						"final_price": {
+							"value": 13.49,
+							"currency": "USD"
+						},
+						"regular_price": {
+							"value": 14.99,
+							"currency": "USD"
+						}
+					},
+					"minimum_price": {
+						"regular_price": {
+							"value": 14.99,
+							"currency": "USD"
+						},
+						"final_price": {
+							"value": 13.49,
+							"currency": "USD"
+						}
+					}
+				},
+				"sku": "1108926",
+				"badges": [],
+				"thumbnail": {
+					"url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/cache/756d0e6f5d40daf5f22c4f72ada167ee/t/w/twill_co_tin_candle_lime_lychee_multi_200gm1.jpg"
+				},
+				"stock_status": "IN_STOCK",
+				"review_count": 0,
+				"rating_summary": 0,
+				"url_key": "twill-co-tin-candle-white-peach-sea-breeze-green-200gm-3",
+				"url_suffix": ".html"
+			},
+			{
+				"__typename": "SimpleProduct",
+				"uid": "MjE5NQ==",
+				"name": "Twill & Co Tin Candle Sweet Pea & Vanilla Grey 200gm",
+				"price_range": {
+					"maximum_price": {
+						"final_price": {
+							"value": 13.49,
+							"currency": "USD"
+						},
+						"regular_price": {
+							"value": 14.99,
+							"currency": "USD"
+						}
+					},
+					"minimum_price": {
+						"regular_price": {
+							"value": 14.99,
+							"currency": "USD"
+						},
+						"final_price": {
+							"value": 13.49,
+							"currency": "USD"
+						}
+					}
+				},
+				"sku": "1108928",
+				"badges": [],
+				"thumbnail": {
+					"url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/cache/756d0e6f5d40daf5f22c4f72ada167ee/t/w/twill_co_tin_candle_sweet_pea_vanilla_grey_200gm-1.jpg"
+				},
+				"stock_status": "IN_STOCK",
+				"review_count": 0,
+				"rating_summary": 0,
+				"url_key": "twill-co-tin-candle-white-peach-sea-breeze-green-200gm-2",
+				"url_suffix": ".html"
+			},
+			{
+				"__typename": "SimpleProduct",
+				"uid": "MjE5Mw==",
+				"name": "Twill & Co Tin Candle White Peach & Sea Breeze Green 200gm",
+				"price_range": {
+					"maximum_price": {
+						"final_price": {
+							"value": 13.49,
+							"currency": "USD"
+						},
+						"regular_price": {
+							"value": 14.99,
+							"currency": "USD"
+						}
+					},
+					"minimum_price": {
+						"regular_price": {
+							"value": 14.99,
+							"currency": "USD"
+						},
+						"final_price": {
+							"value": 13.49,
+							"currency": "USD"
+						}
+					}
+				},
+				"sku": "1108929",
+				"badges": [],
+				"thumbnail": {
+					"url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/cache/756d0e6f5d40daf5f22c4f72ada167ee/t/w/twill_co_tin_candle_white_peach_sea_breeze_green_200gm-1.jpg"
+				},
+				"stock_status": "IN_STOCK",
+				"review_count": 0,
+				"rating_summary": 0,
+				"url_key": "twill-co-tin-candle-white-peach-sea-breeze-green-200gm",
+				"url_suffix": ".html"
+			},
+			{
+				"__typename": "SimpleProduct",
+				"uid": "MjIwMg==",
+				"name": "KAS White Peony Ceramic Candle 350g Blush",
+				"price_range": {
+					"maximum_price": {
+						"final_price": {
+							"value": 27,
+							"currency": "USD"
+						},
+						"regular_price": {
+							"value": 30,
+							"currency": "USD"
+						}
+					},
+					"minimum_price": {
+						"regular_price": {
+							"value": 30,
+							"currency": "USD"
+						},
+						"final_price": {
+							"value": 27,
+							"currency": "USD"
+						}
+					}
+				},
+				"sku": "1103931",
+				"badges": [],
+				"thumbnail": {
+					"url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/cache/756d0e6f5d40daf5f22c4f72ada167ee/k/a/kas_white_peony_ceramic_candle_350g_blush-1.jpg"
+				},
+				"stock_status": "IN_STOCK",
+				"review_count": 0,
+				"rating_summary": 0,
+				"url_key": "twill-co-tin-candle-white-peach-sea-breeze-green-200gm-9",
+				"url_suffix": ".html"
+			},
+			{
+				"__typename": "SimpleProduct",
+				"uid": "MjIwMQ==",
+				"name": "KAS Coconut & Elderflower Ceramic Candle 350g White",
+				"price_range": {
+					"maximum_price": {
+						"final_price": {
+							"value": 27,
+							"currency": "USD"
+						},
+						"regular_price": {
+							"value": 30,
+							"currency": "USD"
+						}
+					},
+					"minimum_price": {
+						"regular_price": {
+							"value": 30,
+							"currency": "USD"
+						},
+						"final_price": {
+							"value": 27,
+							"currency": "USD"
+						}
+					}
+				},
+				"sku": "1103925",
+				"badges": [],
+				"thumbnail": {
+					"url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/cache/756d0e6f5d40daf5f22c4f72ada167ee/k/a/kas_coconut_elderflower_ceramic_candle_350g_white-1.jpg"
+				},
+				"stock_status": "IN_STOCK",
+				"review_count": 0,
+				"rating_summary": 0,
+				"url_key": "twill-co-tin-candle-white-peach-sea-breeze-green-200gm-8",
+				"url_suffix": ".html"
+			},
+			{
+				"__typename": "SimpleProduct",
+				"uid": "MjIwMA==",
+				"name": "KAS Guava & Lychee Ceramic Candle 350g Clay",
+				"price_range": {
+					"maximum_price": {
+						"final_price": {
+							"value": 27,
+							"currency": "USD"
+						},
+						"regular_price": {
+							"value": 30,
+							"currency": "USD"
+						}
+					},
+					"minimum_price": {
+						"regular_price": {
+							"value": 30,
+							"currency": "USD"
+						},
+						"final_price": {
+							"value": 27,
+							"currency": "USD"
+						}
+					}
+				},
+				"sku": "1103929",
+				"badges": [],
+				"thumbnail": {
+					"url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/cache/756d0e6f5d40daf5f22c4f72ada167ee/k/a/kas_guava_lychee_ceramic_candle_350g_clay-1.jpg"
+				},
+				"stock_status": "IN_STOCK",
+				"review_count": 0,
+				"rating_summary": 0,
+				"url_key": "twill-co-tin-candle-white-peach-sea-breeze-green-200gm-7",
+				"url_suffix": ".html"
+			},
+			{
+				"__typename": "SimpleProduct",
+				"uid": "MjE5OQ==",
+				"name": "KAS French Pear & Vanilla Ceramic Candle 350g Sage",
+				"price_range": {
+					"maximum_price": {
+						"final_price": {
+							"value": 27,
+							"currency": "USD"
+						},
+						"regular_price": {
+							"value": 30,
+							"currency": "USD"
+						}
+					},
+					"minimum_price": {
+						"regular_price": {
+							"value": 30,
+							"currency": "USD"
+						},
+						"final_price": {
+							"value": 27,
+							"currency": "USD"
+						}
+					}
+				},
+				"sku": "1103927",
+				"badges": [],
+				"thumbnail": {
+					"url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/cache/756d0e6f5d40daf5f22c4f72ada167ee/k/a/kas_french_pear_vanilla_ceramic_candle_350g_sage.jpg"
+				},
+				"stock_status": "IN_STOCK",
+				"review_count": 0,
+				"rating_summary": 0,
+				"url_key": "twill-co-tin-candle-white-peach-sea-breeze-green-200gm-6",
+				"url_suffix": ".html"
+			},
+			{
+				"__typename": "SimpleProduct",
+				"uid": "MjE5MQ==",
+				"name": "Poppiseed Paxton Puppy Cushion",
+				"price_range": {
+					"maximum_price": {
+						"final_price": {
+							"value": 31.99,
+							"currency": "USD"
+						},
+						"regular_price": {
+							"value": 39.99,
+							"currency": "USD"
+						}
+					},
+					"minimum_price": {
+						"regular_price": {
+							"value": 39.99,
+							"currency": "USD"
+						},
+						"final_price": {
+							"value": 31.99,
+							"currency": "USD"
+						}
+					}
+				},
+				"sku": "1106844",
+				"badges": [],
+				"thumbnail": {
+					"url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/cache/756d0e6f5d40daf5f22c4f72ada167ee/c/a/catalogcontentdetails-1507877-800-800-75-0_0.jpg"
+				},
+				"stock_status": "IN_STOCK",
+				"review_count": 0,
+				"rating_summary": 0,
+				"url_key": "poppiseed-paxton-puppy-cushion",
+				"url_suffix": ".html"
+			},
+			{
+				"__typename": "SimpleProduct",
+				"uid": "MjE5MA==",
+				"name": "Marlborough Textiles Kingfisher Cushion Cover",
+				"price_range": {
+					"maximum_price": {
+						"final_price": {
+							"value": 16,
+							"currency": "USD"
+						},
+						"regular_price": {
+							"value": 20,
+							"currency": "USD"
+						}
+					},
+					"minimum_price": {
+						"regular_price": {
+							"value": 20,
+							"currency": "USD"
+						},
+						"final_price": {
+							"value": 16,
+							"currency": "USD"
+						}
+					}
+				},
+				"sku": "1104519",
+				"badges": [],
+				"thumbnail": {
+					"url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/cache/756d0e6f5d40daf5f22c4f72ada167ee/c/a/catalogcontentdetails-1223227-800-800-75-0_0.jpg"
+				},
+				"stock_status": "IN_STOCK",
+				"review_count": 0,
+				"rating_summary": 0,
+				"url_key": "marlborough-textiles-kingfisher-cushion-cover",
+				"url_suffix": ".html"
+			},
+			{
+				"__typename": "SimpleProduct",
+				"uid": "MjIyNg==",
+				"name": "NXT Sunflower Wall Clock 50.8cm",
+				"price_range": {
+					"maximum_price": {
+						"final_price": {
+							"value": 100,
+							"currency": "USD"
+						},
+						"regular_price": {
+							"value": 104.99,
+							"currency": "USD"
+						}
+					},
+					"minimum_price": {
+						"regular_price": {
+							"value": 104.99,
+							"currency": "USD"
+						},
+						"final_price": {
+							"value": 100,
+							"currency": "USD"
+						}
+					}
+				},
+				"sku": "1093915",
+				"badges": [
+					{
+						"label": "Clearance",
+						"extra_text": "Clearance Price. No Further Discounts Apply.",
+						"type": ""
+					}
+				],
+				"thumbnail": {
+					"url": "https://integration-tjbnicq-7skfpbahl5qu2.us-4.magentosite.cloud/media/catalog/product/cache/756d0e6f5d40daf5f22c4f72ada167ee/n/x/nxt_sunflower_wall_clock_50.8cm1.jpg"
+				},
+				"stock_status": "IN_STOCK",
+				"review_count": 0,
+				"rating_summary": 0,
+				"url_key": "nxt-sunflower-wall-clock-50-8cm",
+				"url_suffix": ".html"
+			}
+		],
+		"page_info": {
+			"total_pages": 7
+		},
+		"total_count": 128
+	}
 }

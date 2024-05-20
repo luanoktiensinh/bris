@@ -3,7 +3,8 @@ import styles from './Item.module.scss';
 import Image from "next/image";
 import Link from "next/link";
 import { MouseEvent, useMemo } from "react";
-import { ProductRecommendedPrice } from "../Price";
+import { FullPrice } from "@/components/Price";
+import {VariantPreview} from "@/components/Product/VariantPreview";
 export const ProductRecommendedItem = ({
     data,
     inMiniCart,
@@ -15,11 +16,6 @@ export const ProductRecommendedItem = ({
         e.stopPropagation();
         onSelect && onSelect(sku);
     };
-    const colors = useMemo(() => {
-        const optionColors = data.configurable_options?.filter(option => option.attribute_code === 'color');
-        const colors = optionColors?.map(optionColor => optionColor.values.map(value => value.swatch_data?.value)).flat();
-        return Array.from(new Set(colors));
-    }, [data]);
     return (
         <Link href={`/${data.url_key}${data.url_suffix}`} className={`${styles.main} ${inMiniCart ? styles.in_minicart : ''}`}>
             <div className={styles.image} style={{position: 'relative'}}>
@@ -32,26 +28,10 @@ export const ProductRecommendedItem = ({
             </div>
             <div className={styles.title} dangerouslySetInnerHTML={{__html: data.name}}/>
             {
-                !!colors.length && (
-                    <div className={styles.variants}>
-                        {
-                            colors.slice(0, limitColor).map(color => (
-                                <div
-                                    key={color}
-                                    className={styles.variants__item}
-                                    has-border={(color === '#ffffff') ? 'true' : undefined}
-                                    style={{backgroundColor: color}}
-                                />
-                            ))
-                        }
-                        {
-                            colors.length > limitColor && <div className={styles.variants__item} has-border="true">+{colors.length - limitColor}</div>
-                        }
-                    </div>
-                )
+                data.configurable_options?.length ? <VariantPreview classes={styles.variants} options={data.configurable_options} /> : ''
             }
             <div className={styles.price}>
-                <ProductRecommendedPrice small={inMiniCart} price_range={data.price_range}/>
+                <FullPrice small={inMiniCart} price_range={data.price_range}/>
             </div>
             <div className={ styles.quickview}>
                 <button onClick={(e) => openQuickView(e, data.sku)}>Quick View</button>

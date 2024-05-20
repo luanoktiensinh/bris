@@ -1,12 +1,12 @@
 import {Fragment, useCallback, useMemo} from "react";
-import { IProductRecommendedPriceProps } from "./Price.type";
+import { FullPriceProps } from "./FullPrice.type";
 import { Price } from "@/components/Price";
 import { useAppSelector } from "@/store/hooks";
 import {isEqual} from "lodash";
-import styles from './Price.module.scss';
-export const ProductRecommendedPrice = ({
-    price_range, small
-}: IProductRecommendedPriceProps) => {
+import styles from './FullPrice.module.scss';
+export const FullPrice = ({
+    price_range, small, inCategory
+}: FullPriceProps) => {
     const { locale, currencyCode } = useAppSelector(store => store.global);
     const getPrice = useCallback((type: "final_price" | "regular_price") => {
         return Array.from(new Set(
@@ -45,7 +45,7 @@ export const ProductRecommendedPrice = ({
         }
     }, [prices, locale, currencyCode]);
     const priceTypes = useMemo<(keyof typeof prices)[]>(() => (['was', 'now']), []);
-    return <div className={`${styles.main} ${small ? styles.small : ''}`}>
+    return <div className={`${styles.main} ${small ? styles.small : ''} ${inCategory ? styles.in_category : ''}`}>
         {
             priceTypes
                 .filter(key => prices[key] !== undefined)
@@ -56,19 +56,4 @@ export const ProductRecommendedPrice = ({
                 ))
         }
     </div>;
-    // const prices = useMemo(() => {
-    //     let prices: number[];
-    //     if(!Array.isArray(price)) {
-    //         prices = [price];
-    //     }else {
-    //         prices = price;
-    //     }
-    //     return prices
-    //         .map((price, index) => (
-    //             <Fragment key={price}>
-    //                 <Price key={price} money={price} locale={locale || ""} currencyCode={currencyCode || ""}/>
-    //                 {index < prices.length -1 ? ' - ' : ''}
-    //             </Fragment>
-    //         ));
-    // }, [price, locale, currencyCode]);
 };

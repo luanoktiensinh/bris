@@ -1,35 +1,11 @@
 import {gql} from "@apollo/client";
-import {fragment_price_range} from "@/graphql/Product.gql";
+import {fragment_config_options_preview, fragment_price_range} from "@/graphql/Product.gql";
 
-const FRAGMENT_RECOMMENDED_PRODUCT = gql`
-    ${fragment_price_range}
-    fragment RecommendedProduct on ProductInterface {
-        uid
-        name
-        small_image {
-            url
-        }
-        url_key
-        stock_status
-        price_range {
-            ...PriceRangeCustom
-        }
-        ...on ConfigurableProduct {
-            configurable_options {
-                attribute_code
-                values {
-                    swatch_data {
-                        value
-                    }
-                }
-            }
-        }
-    }
-`;
 export const GQL_RECOMMENDED_PRODUCTS = gql`
     ${fragment_price_range}
+	${fragment_config_options_preview}
     query getRecommendedProducts {
-        products(pageSize: 10, search: "At") {
+        products(pageSize: 10, search: "KAS Tyler Cotton Slub Cushion 50x50cm") {
             items {
                 uid
                 name
@@ -43,16 +19,7 @@ export const GQL_RECOMMENDED_PRODUCTS = gql`
                 price_range {
                     ...PriceRangeCustom
                 }
-                ...on ConfigurableProduct {
-                    configurable_options {
-                        attribute_code
-                        values {
-                            swatch_data {
-                                value
-                            }
-                        }
-                    }
-                }
+                ...ConfigurationProductOptionsPreview
             }
         }
     }

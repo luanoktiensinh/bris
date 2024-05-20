@@ -1,3 +1,6 @@
+:root {
+    --color-star: #{$color-star}
+}
 html {
     font-size: 10px;
 }
@@ -121,11 +124,13 @@ ul, li {
     margin: 0;
 }
 @include respond-to-min($desktopSize) {
+	.mobile-only,
     .pagebuilder-mobile-only {
         display:none
     }
 }
 @include respond-to-max($desktopSize) {
+	.mobile-hidden,
     .pagebuilder-mobile-hidden {
         display:none
     }
@@ -138,6 +143,12 @@ ul, li {
 }
 .d-none {
     display: none;
+}
+.select {
+    padding: 0.8rem 3.6rem 0.8rem 1.2rem;
+    border: 1px solid #dcdcdc;
+    color: #333;
+    font-size: $font-size--sml;
 }
 @include respond-to-max($tabletSize) {
     .d-m-block {

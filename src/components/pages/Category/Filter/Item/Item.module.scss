@@ -1,0 +1,127 @@
+.main {
+  margin-bottom: 1.8rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.title {
+  @include  flex-center;
+  justify-content: space-between;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 0.5rem;
+  color: $color-tertiary;
+  font-size: $font-size--xsl;
+  letter-spacing: 1px;
+  font-weight: 700;
+  line-height: 1.8;
+  text-transform: uppercase;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: margin-bottom 0.2s;
+  svg {
+    transform: rotate(-90deg);
+    transition: transform 0.2s;
+  }
+}
+.list {
+	max-height: 0;
+	overflow: hidden;
+}
+.item {
+  margin: 0.2rem 0.5rem;
+  @include  flex-center;
+  justify-content: space-between;
+  position: relative;
+  color: $color-tertiary;
+  font-size: $font-size--xsl;
+  font-weight: 400;
+  line-height: 2.2rem;
+  cursor: pointer;
+  .input {
+    position: relative;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 0.8rem;
+    .checkmark {
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      width: 100%;
+      height: 100%;
+    }
+    input {
+      position: absolute;
+      width: 0;
+      height: 0;
+      visibility: hidden;
+      &:checked + .checkmark {
+        background: #36b37e;
+        border-color: transparent;
+      }
+    }
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1.2rem;
+      height: 1.2rem;
+      fill: #fff
+    }
+  }
+  &:hover {
+    .input {
+      input:not(:checked) ~{
+        .checkmark {
+          border-color: #333;
+        }
+        svg {
+          fill: #ddd
+        }
+      }
+    }
+  }
+  .label {
+    margin-right: auto;
+    padding-right: 1rem;
+  }
+}
+.clear {
+	@include  flex-center;
+	gap: 0.6rem;
+	background: transparent;
+	border: 0;
+	font-size: $font-size--xsl;
+	line-height: 120%;
+	font-weight: 700;
+	color: $color-tertiary;
+	text-transform: uppercase;
+	padding: 0.2rem 0.5rem 0.5rem;
+	svg {
+		width: 1.4rem;
+		height: 1.4rem;
+		fill: currentColor;
+	}
+
+}
+.main_expanded {
+  @extend .main;
+	.list {
+		max-height: none;
+	}
+  .title {
+    margin-bottom: 1.5rem;
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+}
+.more {
+  color: $color-tertiary;
+  font-size: $font-size--sml;
+  border: 0;
+  background: none;
+  padding: 0 0.5rem;
+  text-transform: capitalize;
+}

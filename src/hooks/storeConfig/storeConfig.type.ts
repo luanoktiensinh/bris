@@ -8,5 +8,7 @@ interface ICurrency {
 interface IStoreConfig {
     store_code: string,
     locale: string,
-    header_logo_src: string
+    header_logo_src: string,
+	grid_per_page: number,
+	category_url_suffix: string
 }

@@ -7,14 +7,6 @@ export interface IProductRecommendedAttr {
     label: string,
     items: IProductRecommendedAttrItem[]
 }
-export type ProductRecommendedConfOption = {
-    attribute_code: string,
-    values: {
-        swatch_data?: {
-            value: string
-        }
-    }[]
-}
 export interface IProductRecommended {
     uid: string,
     url_key: string,
@@ -27,7 +19,7 @@ export interface IProductRecommended {
     attributes?: IProductRecommendedAttr[],
     sku: string,
     stock_status: string,
-    configurable_options?: ProductRecommendedConfOption[],
+    configurable_options?: ConfigurableProductOption[],
     __typename?: "SimpleProduct" | "ConfigurableProduct"
 }
 export interface IProductRecommendedProps {

@@ -13,3 +13,9 @@ type PriceRange = {
     maximum_price?: ProductPrice
     minimum_price?: ProductPrice
 }
+
+type Breadcrumb = {
+	category_name: string
+	category_uid: string
+	category_url_path: string
+}

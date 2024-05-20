@@ -1,6 +1,9 @@
 import { gql } from "@apollo/client";
-
+import {PLPFragment} from "@/hooks/resolveURL/PLP.gql";
+import {PDPFragment} from "@/hooks/resolveURL/PDP.gql";
 export const GQL_RESOLVE_URL = gql`
+	${PLPFragment}
+	${PDPFragment}
 	query ResolveURL($url: String!) {
 		route(url: $url) {
 			relative_url
@@ -19,14 +22,8 @@ export const GQL_RESOLVE_URL = gql`
 				url_key
 				__typename
 			}
-			... on ProductInterface {
-				uid
-				__typename
-			}
-			... on CategoryInterface {
-				uid
-				__typename
-			}
+			...PDPFragment,
+			...PLPFragment,
 			__typename
 		}
 	}

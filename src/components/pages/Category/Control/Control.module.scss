@@ -1,0 +1,34 @@
+.controls {
+	@include  flex-center;
+	gap: 1.2rem;
+}
+.pagination {
+	margin-left: auto;
+}
+.bottom {
+	margin-top: 1.6rem;
+}
+@include respond-to-max($desktopSize) {
+	.top {
+		.pagination {
+			display: none;
+		}
+		&.controls {
+			gap: 1.6rem;
+		}
+		select {
+			flex: 1;
+			padding: 0.5rem 1.6rem 0.5rem 0.5rem;
+			font-size: $font-size--xsl;
+			max-width: calc(50% - 0.8rem);
+		}
+	}
+	.bottom {
+		select {
+			display: none;
+		}
+		.pagination {
+			margin-right: auto;
+		}
+	}
+}

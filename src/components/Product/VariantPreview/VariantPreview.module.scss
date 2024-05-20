@@ -1,0 +1,22 @@
+.main {
+	@include  flex-center;
+	flex-wrap: wrap;
+	gap: 0.7rem;
+}
+.item {
+	font-size: $font-size--xs;
+	color: #222;
+	line-height: 2rem;
+	min-width: 2rem;
+	height: 2rem;
+	span {
+		padding: 0 0.5rem
+	}
+	img {
+		width: 2rem;
+		height: 2rem;
+	}
+}
+.border {
+	border: 1px solid #000;
+}

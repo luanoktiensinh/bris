@@ -1,0 +1,14 @@
+.pdp-page {
+    :global(.col-4) {
+        @include respond-to-max($desktopSize) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    :global(.col-8) {
+        @include respond-to-max($desktopSize) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+}

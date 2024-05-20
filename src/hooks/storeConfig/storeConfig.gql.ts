@@ -7,6 +7,7 @@ export const GQL_STORE_CONFIG = gql`
 			locale
 			__typename
 			header_logo_src
+			category_url_suffix
 		}
 		currency {
             base_currency_code

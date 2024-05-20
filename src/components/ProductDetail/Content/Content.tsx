@@ -6,7 +6,7 @@ import { Input } from "@/components/Fields";
 import { HeartFillIcon } from "@/icons/heart-solid";
 import { HeartIcon } from "@/icons/heart";
 import Link from "next/link";
-import { ProductRecommendedPrice } from "@/components/ProductRecommended/Price";
+import { FullPrice } from "@/components/Price";
 import { useCart } from "@/hooks/cart/useCart";
 import { Loading } from "@/components/Loading";
 import { useAppDispatch } from "@/store/hooks";
@@ -74,7 +74,7 @@ export const ProductDetailContent = ({
         <div className={styles.main}>
             <h3 className={styles.title} dangerouslySetInnerHTML={{__html: data.name}} />
             <div className={styles.price}>
-                <ProductRecommendedPrice price_range={currentVariant ? currentVariant.product.price_range : data.price_range}/>
+                <FullPrice price_range={currentVariant ? currentVariant.product.price_range : data.price_range}/>
             </div>
             <hr className={styles.divider}/>
             {

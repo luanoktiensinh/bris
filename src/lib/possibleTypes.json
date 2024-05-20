@@ -1,0 +1,207 @@
+{
+  "ErrorInterface": [
+    "NoSuchEntityUidError",
+    "InternalError",
+    "NegotiableQuoteInvalidStateError"
+  ],
+  "AttributeMetadataInterface": [
+    "ProductAttributeMetadata"
+  ],
+  "UiInputTypeInterface": [
+    "UiAttributeTypeSelect",
+    "UiAttributeTypeMultiSelect",
+    "UiAttributeTypeBoolean",
+    "UiAttributeTypeAny",
+    "UiAttributeTypeTextarea",
+    "UiAttributeTypeTextEditor",
+    "UiAttributeTypePageBuilder",
+    "UiAttributeTypeFixedProductTax"
+  ],
+  "AttributeOptionsInterface": [
+    "AttributeOptions",
+    "UiAttributeTypeSelect",
+    "UiAttributeTypeMultiSelect",
+    "UiAttributeTypeBoolean"
+  ],
+  "SelectableInputTypeInterface": [
+    "UiAttributeTypeSelect",
+    "UiAttributeTypeMultiSelect",
+    "UiAttributeTypeBoolean"
+  ],
+  "AttributeOptionInterface": [
+    "AttributeOption"
+  ],
+  "ProductLinksInterface": [
+    "ProductLinks"
+  ],
+  "ProductInterface": [
+    "VirtualProduct",
+    "SimpleProduct",
+    "DownloadableProduct",
+    "BundleProduct",
+    "GiftCardProduct",
+    "GroupedProduct",
+    "ConfigurableProduct"
+  ],
+  "PhysicalProductInterface": [
+    "SimpleProduct",
+    "BundleProduct",
+    "GiftCardProduct",
+    "GroupedProduct",
+    "ConfigurableProduct"
+  ],
+  "MediaGalleryInterface": [
+    "ProductImage",
+    "ProductVideo"
+  ],
+  "CustomizableOptionInterface": [
+    "CustomizableAreaOption",
+    "CustomizableDateOption",
+    "CustomizableDropDownOption",
+    "CustomizableMultipleOption",
+    "CustomizableFieldOption",
+    "CustomizableFileOption",
+    "CustomizableRadioOption",
+    "CustomizableCheckboxOption"
+  ],
+  "CustomizableProductInterface": [
+    "VirtualProduct",
+    "SimpleProduct",
+    "DownloadableProduct",
+    "BundleProduct",
+    "GiftCardProduct",
+    "ConfigurableProduct"
+  ],
+  "CategoryInterface": [
+    "CategoryTree"
+  ],
+  "LayerFilterItemInterface": [
+    "LayerFilterItem",
+    "SwatchLayerFilterItem"
+  ],
+  "AggregationOptionInterface": [
+    "AggregationOption"
+  ],
+  "RoutableInterface": [
+    "CmsPage",
+    "CategoryTree",
+    "VirtualProduct",
+    "SimpleProduct",
+    "DownloadableProduct",
+    "BundleProduct",
+    "GiftCardProduct",
+    "GroupedProduct",
+    "ConfigurableProduct"
+  ],
+  "CompanyStructureEntity": [
+    "CompanyTeam",
+    "Customer"
+  ],
+  "CartAddressInterface": [
+    "ShippingCartAddress",
+    "BillingCartAddress"
+  ],
+  "CartItemInterface": [
+    "SimpleCartItem",
+    "VirtualCartItem",
+    "DownloadableCartItem",
+    "BundleCartItem",
+    "GiftCardCartItem",
+    "ConfigurableCartItem"
+  ],
+  "RequisitionListItemInterface": [
+    "SimpleRequisitionListItem",
+    "VirtualRequisitionListItem",
+    "DownloadableRequisitionListItem",
+    "BundleRequisitionListItem",
+    "ConfigurableRequisitionListItem",
+    "GiftCardRequisitionListItem"
+  ],
+  "WishlistItemInterface": [
+    "SimpleWishlistItem",
+    "VirtualWishlistItem",
+    "DownloadableWishlistItem",
+    "BundleWishlistItem",
+    "GiftCardWishlistItem",
+    "GroupedProductWishlistItem",
+    "ConfigurableWishlistItem"
+  ],
+  "OrderItemInterface": [
+    "DownloadableOrderItem",
+    "BundleOrderItem",
+    "GiftCardOrderItem",
+    "OrderItem"
+  ],
+  "GiftRegistryOutputInterface": [
+    "GiftRegistryOutput",
+    "MoveCartItemsToGiftRegistryOutput"
+  ],
+  "GiftRegistryItemUserErrorInterface": [
+    "GiftRegistryItemUserErrors",
+    "MoveCartItemsToGiftRegistryOutput"
+  ],
+  "GiftRegistryDynamicAttributeMetadataInterface": [
+    "GiftRegistryDynamicAttributeMetadata"
+  ],
+  "GiftRegistryDynamicAttributeInterface": [
+    "GiftRegistryRegistrantDynamicAttribute",
+    "GiftRegistryDynamicAttribute"
+  ],
+  "GiftRegistryItemInterface": [
+    "GiftRegistryItem"
+  ],
+  "InvoiceItemInterface": [
+    "DownloadableInvoiceItem",
+    "BundleInvoiceItem",
+    "GiftCardInvoiceItem",
+    "InvoiceItem"
+  ],
+  "ShipmentItemInterface": [
+    "BundleShipmentItem",
+    "GiftCardShipmentItem",
+    "ShipmentItem"
+  ],
+  "CreditMemoItemInterface": [
+    "DownloadableCreditMemoItem",
+    "BundleCreditMemoItem",
+    "GiftCardCreditMemoItem",
+    "CreditMemoItem"
+  ],
+  "CloseNegotiableQuoteOperationResult": [
+    "NegotiableQuoteUidOperationSuccess",
+    "CloseNegotiableQuoteOperationFailure"
+  ],
+  "CloseNegotiableQuoteError": [
+    "NegotiableQuoteInvalidStateError",
+    "NoSuchEntityUidError",
+    "InternalError"
+  ],
+  "DeleteNegotiableQuoteOperationResult": [
+    "NegotiableQuoteUidOperationSuccess",
+    "DeleteNegotiableQuoteOperationFailure"
+  ],
+  "DeleteNegotiableQuoteError": [
+    "NegotiableQuoteInvalidStateError",
+    "NoSuchEntityUidError",
+    "InternalError"
+  ],
+  "NegotiableQuoteAddressInterface": [
+    "NegotiableQuoteShippingAddress",
+    "NegotiableQuoteBillingAddress"
+  ],
+  "NegotiableQuoteUidNonFatalResultInterface": [
+    "NegotiableQuoteUidOperationSuccess"
+  ],
+  "PurchaseOrderApprovalRuleConditionInterface": [
+    "PurchaseOrderApprovalRuleConditionAmount",
+    "PurchaseOrderApprovalRuleConditionQuantity"
+  ],
+  "SwatchLayerFilterItemInterface": [
+    "SwatchLayerFilterItem"
+  ],
+  "SwatchDataInterface": [
+    "ImageSwatchData",
+    "TextSwatchData",
+    "ColorSwatchData"
+  ]
+}

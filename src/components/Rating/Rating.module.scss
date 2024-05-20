@@ -1,0 +1,14 @@
+.main {
+  margin-top: 0.5rem;
+  @include  flex-center;
+  color: $color-star-gray;
+  svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}
+.review_count {
+  font-size: $font-size--sm;
+  color: $color-gray;
+  margin-left: 0.5rem;
+}

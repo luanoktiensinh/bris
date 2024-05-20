@@ -9,7 +9,7 @@ export const useIsVisible = ({ref, renderOnce}: Props) => {
     useEffect(() => {
         const target = ref.current;
         if(!target) return;
-        let observer: IntersectionObserver | null = null;
+        let observer: IntersectionObserver;
         if(typeof IntersectionObserver !== 'undefined') {
             observer = new IntersectionObserver((entries) => {
                 const isIntersecting =

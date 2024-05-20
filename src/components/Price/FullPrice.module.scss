@@ -1,0 +1,33 @@
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	&.in_category {
+		gap: 0;
+		.price {
+			font-size: $font-size--lg;
+			@include respond-to-max($desktopSize) {
+				font-size: $font-size--sml;
+			}
+		}
+	}
+}
+.price {
+	font-size: $font-size--base;
+	font-weight: 700;
+	color: #4a4a4a;
+	line-height: 1.5;
+	text-transform: capitalize;
+	&_now {
+		@extend .price;
+		color: #db0000;
+		font-size: $font-size--lg;
+	}
+}
+.small {
+	gap: 0;
+	.price {
+		font-weight: 400;
+		font-size: $font-size--xs;
+	}
+}

@@ -1,4 +1,3 @@
-$color-main: #00589f;
 .main {
     line-height: 1.5;
     display: flex;
@@ -32,21 +31,6 @@ $color-main: #00589f;
 }
 .variants {
     margin: 0.8rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.7rem;
-    &__item {
-        min-width: 2rem;
-        height: 2rem;
-        padding: 0 0.4rem;
-        &[has-border] {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: $font-size--sm;
-            border: 1px solid gray
-        }
-    }
 }
 .quickview {
     display: block;
@@ -55,7 +39,7 @@ $color-main: #00589f;
         margin-top: 2.3rem;
         width: 100%;
         text-transform: uppercase;
-        color: $color-main;
+        color: $color-tertiary;
         border: 1px solid currentColor;
         height: 4.8rem;
         font-size: $font-size--sm;
@@ -65,7 +49,7 @@ $color-main: #00589f;
         background: white;
         transition: all .25s ease;
         &:hover {
-            background-color: $color-main;
+            background-color: $color-tertiary;
             color: #fff;
         }
     }

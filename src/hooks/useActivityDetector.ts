@@ -16,6 +16,7 @@ export const useActivityDetector = () => {
     const onDetected = useCallback(() => {
         setActive(true);
         removeEvents();
+		// eslint-disable-next-line
     }, []);
     const addEvents = useCallback(() => {
         DEFAULT_ACTIVITY_EVENTS.forEach(eventName => {
