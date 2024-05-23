@@ -10,22 +10,50 @@ export const useImageByIntagram = () => {
             {
                 "id": 1,
                 "name": "Spider-Man",
-                "image_url": tempImg1
+                "image_url": tempImg1,
+                "descriptions": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
             },
             {
                 "id": 2,
                 "name": "Spider-Man 2",
-                "image_url": tempImg2
+                "image_url": tempImg2,
+                "descriptions": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
             },
             {
                 "id": 3,
                 "name": "Spider-Man 3",
-                "image_url": tempImg3
+                "image_url": tempImg3,
+                "descriptions": "It has survived not only five centuries"
             },
             {
-                "id": 2,
+                "id": 4,
                 "name": "Spider-Man 4",
-                "image_url": tempImg4
+                "image_url": tempImg4,
+                "descriptions": "It was popularised in the 1960s with the release"
+            },
+            {
+                "id": 5,
+                "name": "Spider-Man",
+                "image_url": tempImg1,
+                "descriptions": "Contrary to popular belief, Lorem Ipsum is not simply random text"
+            },
+            {
+                "id": 6,
+                "name": "Spider-Man 2",
+                "image_url": tempImg2,
+                "descriptions": "The standard chunk of Lorem Ipsum used since the 1500s"
+            },
+            {
+                "id": 7,
+                "name": "Spider-Man 3",
+                "image_url": tempImg3,
+                "descriptions": "There are many variations of passages of Lorem Ipsum available"
+            },
+            {
+                "id": 8,
+                "name": "Spider-Man 4",
+                "image_url": tempImg4,
+                "descriptions": "Many desktop publishing packages and web page editors"
             }
         ]
     };

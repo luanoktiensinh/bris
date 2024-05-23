@@ -1,0 +1,21 @@
+.social-sharing {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.social-sharing__icon {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color: #666;
+    margin-left: 15px;
+    &:first-child {
+        margin-left: 0;
+    }
+    svg {
+        height: 100%;
+        max-width: 100%;
+        fill: #666;
+    }
+}

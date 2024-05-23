@@ -1287,6 +1287,7 @@ export const Route: IResolveRouteResponse = {
         "type": "CMS_PAGE",
         "identifier": "briscoes",
         "bottom_content": "We're sorry, an error has occurred while generating this content.",
+        "content": "Ok content.",
         "content_heading": "Home Page",
         "meta_description": "Create your ideal living space with Briscoes. Huge range of bathroom, & bedroom, laundry & lounge items. Shop online at Briscoes & we’ll deliver right to your door!",
         "meta_keywords": "Homeware & Home Accessories",
@@ -3855,4 +3856,4 @@ export const Category: CategoryResponse = {
 		},
 		"total_count": 128
 	}
-}
+};

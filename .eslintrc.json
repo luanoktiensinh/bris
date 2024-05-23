@@ -1,6 +1,11 @@
 {
   "extends": "next/core-web-vitals",
   "rules": {
-    "semi": "warn"
+    "semi": "error",
+		"import/dynamic-import-chunkname": [2, {
+			"importFunctions": ["dynamicImport"],
+			"webpackChunknameFormat": "[a-zA-Z0-57-9-/_]+",
+			"allowEmpty": false
+		}]
   }
 }

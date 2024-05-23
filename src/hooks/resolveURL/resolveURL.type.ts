@@ -1,6 +1,4 @@
 export interface ICMSPage extends IRoute{
-    bottom_content: string,
-    content?: string,
     content_heading: string,
     meta_description?: string,
     meta_keywords?: string,
@@ -24,6 +22,8 @@ export interface IPDPPage extends IRoute{
 	categories: ProductCategory[]
 }
 export interface IRoute {
+    bottom_content: string,
+    content: string,
     relative_url?: string,
     redirect_code: number,
     type: ("PRODUCT" | "CATEGORY" | "CMS_PAGE"),

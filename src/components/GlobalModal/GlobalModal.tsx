@@ -1,5 +1,4 @@
 "use client";
-
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import styles from './GlobalModal.module.scss';
 import { setShow } from '@/store/features/globalModal/GlobalModalSlide';

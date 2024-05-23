@@ -1,1 +1,1 @@
-export { default as ImageByIntagram } from './ImageByIntagram';
+export * from './ImageByIntagram';

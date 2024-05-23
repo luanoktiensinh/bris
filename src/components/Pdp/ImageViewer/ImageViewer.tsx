@@ -1,6 +1,6 @@
 "use client";
 import { IImageViewerProps } from "./ImageViewer.type";
-import { useMemo, useState, useEffect  } from "react";
+import { useMemo, useState  } from "react";
 import { SwiperOptions } from "swiper/types";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
@@ -26,7 +26,8 @@ export const ImageViewer = ({
         loop: items?.length > 1,
         spaceBetween: 0,
         navigation: items?.length > 1,
-        thumbs: { swiper: thumbsSwiperActive } 
+        thumbs: { swiper: thumbsSwiperActive }
+				// eslint-disable-next-line
     }), [items, thumbsSwiperActive]);
     
     return (

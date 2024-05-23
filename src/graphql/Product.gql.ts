@@ -48,4 +48,4 @@ export const fragment_config_options_preview = gql`
 			}
 		}
 	}
-`
+`;

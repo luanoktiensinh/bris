@@ -1,3 +1,29 @@
+
+.main {
+    :global {
+        .swiper-button-prev, .swiper-button-next {
+            width: 60px;
+            height: 100%;
+            top: 0;
+            margin-top: 0;
+            right: 0;
+            background-color: rgba(white, 0.85);
+            transition: opacity .5s linear;
+            --swiper-navigation-color: #000000;
+            opacity: 0;
+            &:hover {
+                opacity: 1;
+            }
+            &::after {
+                font-size: 36px;
+            }
+        }
+        .swiper-button-prev {
+            left: 0;
+            right: auto;
+        }
+    }
+}
 .shop-instagram {
     margin: 48px 0;
     .shop-instagram__title {

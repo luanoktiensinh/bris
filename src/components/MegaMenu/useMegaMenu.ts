@@ -4,14 +4,17 @@ import { IMegaMenuItem, IMegaMenuResponse } from "./MegaMenu.type";
 import { cloneDeep } from "lodash";
 import { MEGAMENU_BRANDS_ID } from "@/const/global";
 import {MegaMenu} from "@/mock/data";
+import {useHelpers} from "@/app/helpers";
 
 export const useMegaMenu = () => {
-    // const client = getClient();
+    const client = getClient();
+		const { resolveLink } = useHelpers();
     const formatItems = (items: IMegaMenuItem[], parentIndex: number = 0, parentPath: string = '', level = 0) => {
         let _parent_path = '';
         items.forEach((item, index) => {
             _parent_path = level ? `${parentPath}[${parentIndex}]` : '';
             item.level = level;
+						item.link = resolveLink(item.link);
             item.parent_path = _parent_path;
             if(item.children?.length) {
                 item.children = formatItems(item.children, index,  _parent_path + (level >= 1 ? `.children` : ''), level + 1);
@@ -27,10 +30,11 @@ export const useMegaMenu = () => {
         return items;
     };
     const getData = async () => {
-        // const { data } = await client.query<IMegaMenuResponse>({
-        //     query: GET_MEGAMENU_GQL
-        // });
-        const _data = cloneDeep(MegaMenu);
+        const { data } = await client.query<IMegaMenuResponse>({
+            query: GET_MEGAMENU_GQL
+        });
+        // const _data = cloneDeep(MegaMenu);
+        const _data = cloneDeep(data);
         _data.getDynamicMenu.menu_items = formatItems(_data.getDynamicMenu.menu_items);
         return _data.getDynamicMenu;
     };
