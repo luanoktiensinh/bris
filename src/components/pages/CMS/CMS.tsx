@@ -1,5 +1,5 @@
 "use client";
-import { IRoute, ICMSPage } from "@/hooks/resolveURL/resolveURL.type";
+import { IRoute } from "@/hooks/resolveURL/resolveURL.type";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { ImageByIntagram } from "@/components/ImageByIntagram";
 import dynamic from "next/dynamic";
@@ -7,16 +7,16 @@ const ProductRecommended = dynamic(() => import( /* webpackChunkName: "product-r
 
 import { CommonProductList } from "@/components/CommonProductList";
 
-export const CMSPage = async ({content, bottom_content}: IRoute) => {
+export const CMSPage = async ({}: IRoute) => {
 
     return (
         <>
-            {/* <HeroCarousel />
-            <CommonProductList /> */}
-            <div dangerouslySetInnerHTML={{__html: content || "ok man content"}}></div>
-            <div dangerouslySetInnerHTML={{__html: bottom_content || "ok man bottom content"}}></div>
-            {/* <ProductRecommended />
-            <ImageByIntagram /> */}
+            <HeroCarousel />
+            <CommonProductList />
+            {/* <div dangerouslySetInnerHTML={{__html: content}}></div>
+            <div dangerouslySetInnerHTML={{__html: bottom_content}}></div> */}
+            <ProductRecommended />
+            <ImageByIntagram />
         </>
     );
 };
